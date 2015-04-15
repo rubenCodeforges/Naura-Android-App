@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">WebApp</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_create_object">CreateObject</string>
+    <!--Tab strings-->
+    <string name="owner_info">Владелец</string>
+    <string name="object_info">Объект</string>
+    <string name="pictures">Картинки</string>
+
+    <string name="owner_name">ФИ владельца</string>
+    <string name="owner_phone">Телефон</string>
+    <string name="other_contacts">Другие методы связи</string>
+
+    <string name="agent_number">Номер агента</string>
+    <string name="community">Община</string>
+    <string name="city">Город или поселок</string>
+    <string name="building_date">Год постройки</string>
+    <string name="sea_distance">Удаленность от моря</string>
+    <string name="object_area">Площадь объекта</string>
+    <string name="object_land_area">Площадь земли или двора</string>
+    <string name="land_marks">Ориентиры</string>
+    <string name="bedrooms_count">Количество спален</string>
+    <string name="floors">Этажность или этаж</string>
+    <string name="neighbors">Кто соседи</string>
+    <string name="ko">KO</string>
+    <string name="real_estate_list_number">Номер листа недвижимости</string>
+    <string name="flat_pd">PD* для квартир</string>
+</resources>
