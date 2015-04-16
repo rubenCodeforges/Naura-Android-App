@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.TabHost;
 
 import com.example.ruben.webapp.Service.FormService;
 import com.joanzapata.android.iconify.Iconify;
@@ -45,7 +46,7 @@ public class NewItemActivity extends ActionBarActivity {
                     }
                 }
         );
-        //this.initTabs();
+        this.initTabs();
     }
 
 
@@ -71,21 +72,21 @@ public class NewItemActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-//    public void initTabs () {
-//        TabHost tabs = (TabHost) findViewById(R.id.tabHost);
-//        tabs.setup();
-//
-//        TabHost.TabSpec spec = tabs.newTabSpec("tag1");
-//
-//        spec.setContent(R.id.tab1);
-//        spec.setIndicator(getString(R.string.owner_info));
-//        tabs.addTab(spec);
-//
-//        spec = tabs.newTabSpec("tag2");
-//        spec.setContent(R.id.tab2);
-//        spec.setIndicator(getString(R.string.object_info));
-//        tabs.addTab(spec);
-//
-//        tabs.setCurrentTab(0);
-//    }
+    public void initTabs () {
+        TabHost tabs = (TabHost) findViewById(R.id.tabHost);
+        tabs.setup();
+
+        TabHost.TabSpec spec = tabs.newTabSpec("tag1");
+
+        spec.setContent(R.id.tab1);
+        spec.setIndicator(getString(R.string.owner_info));
+        tabs.addTab(spec);
+
+        spec = tabs.newTabSpec("tag2");
+        spec.setContent(R.id.tab2);
+        spec.setIndicator(getString(R.string.object_info));
+        tabs.addTab(spec);
+
+        tabs.setCurrentTab(0);
+    }
 }

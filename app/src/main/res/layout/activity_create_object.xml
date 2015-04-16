@@ -23,630 +23,673 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
-    <TableLayout
+
+
+    <TabHost
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_alignTop="@+id/form_opject_info"
+        android:id="@+id/tabHost"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/btnSaveItem">
+        android:layout_alignParentStart="true">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
 
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/community"
-                android:id="@+id/community_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/community_input"
-                android:layout_column="1"
-                android:layout_weight="1" />
-
-        </TableRow>
-
-        <!--<TableRow-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent">-->
-
-            <!--<TextView-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-                <!--android:text="@string/city"-->
-                <!--android:id="@+id/city_label"-->
-                <!--android:layout_column="0"-->
-                <!--android:layout_weight="0.1"-->
-                <!--android:textSize="@dimen/abc_text_size_small_material" />-->
-            <!--<Spinner-->
-                <!--android:layout_width="wrap_content"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:id="@+id/city_input"-->
-                <!--android:layout_column="1"-->
-                <!--android:layout_weight="1" />-->
-        <!--</TableRow>-->
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/building_date"
-                android:id="@+id/building_date_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/building_date"
-                android:layout_column="1"
-                android:layout_weight="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/sea_distance"
-                android:id="@+id/sea_distance_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/distance_to_sea"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/object_area"
-                android:id="@+id/object_area_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/object_area"
-                android:layout_column="1"
-                android:layout_weight="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/object_land_area"
-                android:id="@+id/object_land_area_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/object_land_area"
-                android:inputType="number"
-                android:ems="10"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/land_marks"
-                android:id="@+id/land_marks_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/land_marks"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/bedrooms_count"
-                android:id="@+id/bedrooms_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/bedrooms_count"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/floors"
-                android:id="@+id/floors_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/floors"
-                android:inputType="number"
-                android:ems="10"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/neighbors"
-                android:id="@+id/neighbors_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/neighbors"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/ko"
-                android:id="@+id/ko_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <Spinner
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ko_input_spinner"
-                android:layout_column="1"
-                android:layout_weight="1" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/real_estate_list_number"
-                android:id="@+id/real_estate_list_number_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/real_estate_list_number"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/flat_pd"
-                android:id="@+id/flat_pd_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/flat_pd"
-                android:layout_column="1"
-                android:inputType="number"
-                android:ems="10"
-                android:layout_weight="1" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/object_type"
-                android:id="@+id/object_type_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <RadioGroup
+            <TabWidget
+                android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_weight="1">
+                android:visibility="visible"></TabWidget>
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/object_type_land"
-                    android:id="@+id/lan"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/object_type_house"
-                    android:id="@+id/object_type_house"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/object_type_flat"
-                    android:id="@+id/object_type_flat"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/object_type_office"
-                    android:id="@+id/object_type_office"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
-
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/object_type_hotel"
-                    android:id="@+id/object_type_hotel"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
-            </RadioGroup>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/sea_view"
-                android:id="@+id/sea_view_label"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material" />
-
-            <RadioGroup
+            <FrameLayout
+                android:id="@android:id/tabcontent"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_column="1"
-                android:layout_weight="1" >
+                android:layout_height="fill_parent">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/yes"
-                    android:id="@+id/sea_view_yes"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
+                <LinearLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
 
-                <RadioButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/no"
-                    android:id="@+id/sea_view_no"
-                    android:layout_weight="0.5"
-                    android:checked="false" />
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_above="@+id/btnSaveItem">
 
-            </RadioGroup>
-        </TableRow>
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/owner_name"
+                                android:id="@+id/owner_name_label"
+                                android:layout_column="0"
+                                android:layout_weight="0.1"
+                                android:textSize="@dimen/abc_text_size_small_material" />
 
-            <Space
-                android:layout_width="2dp"
-                android:layout_height="20dp"
-                android:layout_column="0"
-                android:layout_weight="1" />
-        </TableRow>
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText"
+                                android:layout_column="3"
+                                android:layout_weight="1" />
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+                        </TableRow>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/amount"
-                android:id="@+id/textView"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_title_material" />
-        </TableRow>
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/owner_phone"
+                                android:id="@+id/owner_phone_label"
+                                android:layout_column="0"
+                                android:layout_weight="0.1"
+                                android:textSize="@dimen/abc_text_size_small_material" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/bathrooms"
-                android:id="@+id/textView2"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp" />
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText2"
+                                android:layout_column="3"
+                                android:layout_weight="1" />
+                        </TableRow>
 
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/bathrooms_count"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
+                        <TableRow
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:text="@string/other_contacts"
+                                android:id="@+id/textView"
+                                android:layout_column="0"
+                                android:layout_weight="0.1"
+                                android:textSize="@dimen/abc_text_size_small_material" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/halls"
-                android:id="@+id/textView3"
-                android:layout_column="0"
-                android:layout_weight="0.1"
-                android:textSize="@dimen/abc_text_size_small_material"
-                android:layout_marginLeft="20dp"/>
-            <EditText
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:inputType="number"
-                android:ems="10"
-                android:id="@+id/halls_count"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
+                            <EditText
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/editText3"
+                                android:layout_column="3"
+                                android:layout_weight="1" />
+                        </TableRow>
 
-    </TableLayout>
+                    </TableLayout>
+                </LinearLayout>
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/btnSaveItem"
-        android:id="@+id/form_opject_info"
-        android:fillViewport="false"
-        android:visibility="gone">
+                <LinearLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+                        <ScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/form_opject_info"
+                            android:layout_above="@+id/btnSaveItem">
 
-    </ScrollView>
+                            <TableLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_above="@+id/btnSaveItem">
 
-    <!--<TabHost-->
-        <!--android:layout_width="fill_parent"-->
-        <!--android:layout_height="fill_parent"-->
-        <!--android:id="@+id/tabHost"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true">-->
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="fill_parent"-->
-            <!--android:orientation="vertical">-->
+                                </TableRow>
 
-            <!--<TabWidget-->
-                <!--android:id="@android:id/tabs"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:visibility="visible"></TabWidget>-->
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-            <!--<FrameLayout-->
-                <!--android:id="@android:id/tabcontent"-->
-                <!--android:layout_width="fill_parent"-->
-                <!--android:layout_height="fill_parent">-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/community"
+                                        android:id="@+id/community_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/tab1"-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="fill_parent"-->
-                    <!--android:orientation="vertical">-->
+                                    <Spinner
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/community_input"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
 
-                    <!--<TableLayout-->
-                        <!--android:layout_width="fill_parent"-->
-                        <!--android:layout_height="fill_parent"-->
-                        <!--android:layout_alignParentTop="true"-->
-                        <!--android:layout_alignParentLeft="true"-->
-                        <!--android:layout_alignParentStart="true"-->
-                        <!--android:layout_above="@+id/btnSaveItem">-->
+                                </TableRow>
 
-                        <!--<TableRow-->
-                            <!--android:layout_width="fill_parent"-->
-                            <!--android:layout_height="fill_parent">-->
+                                <!--<TableRow-->
+                                <!--android:layout_width="fill_parent"-->
+                                <!--android:layout_height="fill_parent">-->
 
-                            <!--<TextView-->
+                                <!--<TextView-->
                                 <!--android:layout_width="wrap_content"-->
                                 <!--android:layout_height="wrap_content"-->
                                 <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-                                <!--android:text="@string/owner_name"-->
-                                <!--android:id="@+id/owner_name_label"-->
+                                <!--android:text="@string/city"-->
+                                <!--android:id="@+id/city_label"-->
                                 <!--android:layout_column="0"-->
                                 <!--android:layout_weight="0.1"-->
                                 <!--android:textSize="@dimen/abc_text_size_small_material" />-->
-
-                            <!--<EditText-->
+                                <!--<Spinner-->
                                 <!--android:layout_width="wrap_content"-->
                                 <!--android:layout_height="wrap_content"-->
-                                <!--android:id="@+id/editText"-->
-                                <!--android:layout_column="3"-->
+                                <!--android:id="@+id/city_input"-->
+                                <!--android:layout_column="1"-->
                                 <!--android:layout_weight="1" />-->
+                                <!--</TableRow>-->
 
-                        <!--</TableRow>-->
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-                        <!--<TableRow-->
-                            <!--android:layout_width="fill_parent"-->
-                            <!--android:layout_height="fill_parent">-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/building_date"
+                                        android:id="@+id/building_date_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
 
-                            <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-                                <!--android:text="@string/owner_phone"-->
-                                <!--android:id="@+id/owner_phone_label"-->
-                                <!--android:layout_column="0"-->
-                                <!--android:layout_weight="0.1"-->
-                                <!--android:textSize="@dimen/abc_text_size_small_material" />-->
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/building_date"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
 
-                            <!--<EditText-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:id="@+id/editText2"-->
-                                <!--android:layout_column="3"-->
-                                <!--android:layout_weight="1" />-->
-                        <!--</TableRow>-->
+                                </TableRow>
 
-                        <!--<TableRow-->
-                            <!--android:layout_width="fill_parent"-->
-                            <!--android:layout_height="fill_parent">-->
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-                            <!--<TextView-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
-                                <!--android:text="@string/other_contacts"-->
-                                <!--android:id="@+id/textView"-->
-                                <!--android:layout_column="0"-->
-                                <!--android:layout_weight="0.1"-->
-                                <!--android:textSize="@dimen/abc_text_size_small_material" />-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/sea_distance"
+                                        android:id="@+id/sea_distance_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
 
-                            <!--<EditText-->
-                                <!--android:layout_width="wrap_content"-->
-                                <!--android:layout_height="wrap_content"-->
-                                <!--android:id="@+id/editText3"-->
-                                <!--android:layout_column="3"-->
-                                <!--android:layout_weight="1" />-->
-                        <!--</TableRow>-->
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/distance_to_sea"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
 
-                    <!--</TableLayout>-->
-                <!--</LinearLayout>-->
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-                <!--<LinearLayout-->
-                    <!--android:id="@+id/tab2"-->
-                    <!--android:layout_width="fill_parent"-->
-                    <!--android:layout_height="fill_parent"-->
-                    <!--android:orientation="vertical">-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/object_area"
+                                        android:id="@+id/object_area_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
 
-                    <!---->
-                    <!--</LinearLayout>-->
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/object_area"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
 
+                                </TableRow>
 
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
 
-            <!--</FrameLayout>-->
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/object_land_area"
+                                        android:id="@+id/object_land_area_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
 
-        <!--</LinearLayout>-->
-    <!--</TabHost>-->
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/object_land_area"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/land_marks"
+                                        android:id="@+id/land_marks_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/land_marks"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/bedrooms_count"
+                                        android:id="@+id/bedrooms_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/bedrooms_count"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/floors"
+                                        android:id="@+id/floors_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/floors"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/neighbors"
+                                        android:id="@+id/neighbors_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/neighbors"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/ko"
+                                        android:id="@+id/ko_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <Spinner
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/ko_input_spinner"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/real_estate_list_number"
+                                        android:id="@+id/real_estate_list_number_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/real_estate_list_number"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/flat_pd"
+                                        android:id="@+id/flat_pd_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/flat_pd"
+                                        android:layout_column="1"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/object_type"
+                                        android:id="@+id/object_type_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_title_material" />
+
+                                    <RadioGroup
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_column="1"
+                                        android:layout_weight="1">
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/object_type_land"
+                                            android:id="@+id/lan"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/object_type_house"
+                                            android:id="@+id/object_type_house"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/object_type_flat"
+                                            android:id="@+id/object_type_flat"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/object_type_office"
+                                            android:id="@+id/object_type_office"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/object_type_hotel"
+                                            android:id="@+id/object_type_hotel"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+                                    </RadioGroup>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/sea_view"
+                                        android:id="@+id/sea_view_label"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_title_material" />
+
+                                    <RadioGroup
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" >
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/yes"
+                                            android:id="@+id/sea_view_yes"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                        <RadioButton
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@string/no"
+                                            android:id="@+id/sea_view_no"
+                                            android:layout_weight="0.5"
+                                            android:checked="false" />
+
+                                    </RadioGroup>
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <Space
+                                        android:layout_width="2dp"
+                                        android:layout_height="20dp"
+                                        android:layout_column="0"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/amount"
+                                        android:id="@+id/amount_input"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_title_material" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/bathrooms"
+                                        android:id="@+id/textView2"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginTop="5dp" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/bathrooms_count"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/halls"
+                                        android:id="@+id/textView3"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material"
+                                        android:layout_marginLeft="20dp"/>
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/halls_count"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/bedrooms"
+                                        android:id="@+id/textView4"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material"
+                                        android:layout_marginLeft="20dp" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/bedrooms"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="fill_parent">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textAppearance="?android:attr/textAppearanceMedium"
+                                        android:text="@string/kitchens"
+                                        android:id="@+id/textView5"
+                                        android:layout_column="0"
+                                        android:layout_weight="0.1"
+                                        android:textSize="@dimen/abc_text_size_small_material"
+                                        android:layout_marginLeft="20dp" />
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:inputType="number"
+                                        android:ems="10"
+                                        android:id="@+id/kitchens"
+                                        android:layout_column="1"
+                                        android:layout_weight="1" />
+                                </TableRow>
+
+                            </TableLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+    </TabHost>
 
 </RelativeLayout>
