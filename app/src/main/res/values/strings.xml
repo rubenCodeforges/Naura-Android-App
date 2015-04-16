@@ -27,4 +27,19 @@
     <string name="ko">KO</string>
     <string name="real_estate_list_number">Номер листа недвижимости</string>
     <string name="flat_pd">PD* для квартир</string>
+    <string name="object_type">Тип объекта</string>
+        <string name="object_type_land">Земля</string>
+        <string name="object_type_house">Дом</string>
+        <string name="object_type_flat">Квартира</string>
+        <string name="object_type_office">Оффис</string>
+        <string name="object_type_hotel">Отель</string>
+    <string name="sea_view">Вид на море</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="amount">Количество</string>
+        <string name="bathrooms">туалетов</string>
+        <string name="halls">залов</string>
+        <string name="bedrooms">спален</string>
+        <string name="kitchens">кухонь</string>
+
 </resources>

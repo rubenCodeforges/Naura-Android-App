@@ -1,0 +1,891 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="community_list">
+        <item>Andrijevica</item>
+        <item>Bar</item>
+        <item>Berane</item>
+        <item>Bijelo Polje</item>
+        <item>Budva</item>
+        <item>Cetinje</item>
+        <item>Danilovgrad</item>
+        <item>Herceg Novi</item>
+        <item>Kolašin</item>
+        <item>Kotor</item>
+        <item>Mojkovac</item>
+        <item>Nikšić</item>
+        <item>Plav</item>
+        <item>Pljevlja</item>
+        <item>Plužine</item>
+        <item>Podgorica</item>
+        <item>Rožaje</item>
+        <item>Šavnik</item>
+        <item>Tivat</item>
+        <item>Ulcinj</item>
+        <item>Žabljak</item>
+    </string-array>
+    
+    <string-array name="KO_Andrijevica">
+        <item>ANDRIJEVICA</item>
+        <item>BOJOVIĆI</item>
+        <item>CECUNE</item>
+        <item>DULIPOLJE</item>
+        <item>ĐULIĆI</item>
+        <item>GNJILI POTOK</item>
+        <item>GORNJE LUGE</item>
+        <item>GRAČANICA</item>
+        <item>JOŠANICA</item>
+        <item>KOŠUTIĆE</item>
+        <item>KRALJE</item>
+        <item>KUTE</item>
+        <item>OBLO BRDO</item>
+        <item>RIJEKA MARSENIĆA</item>
+        <item>SEOCE</item>
+        <item>SJENOŽETA</item>
+        <item>SLATINA1</item>
+        <item>SLATINA II</item>
+        <item>TREPČA1</item>
+        <item>TREPČA II</item>
+        <item>TREŠNJEVO I</item>
+        <item>TREŠNJEVO II</item>
+        <item>ULOTINA</item>
+        <item>ZABRĐE1</item>
+        <item>ZABRĐE II</item>
+    </string-array>
+    
+    <string-array name="KO_Bar">
+        <item>ARBNEŠ</item>
+        <item>BARTULA</item>
+        <item>BOBOVIŠTE</item>
+        <item>BOLJEVIĆI</item>
+        <item>BRAĆENI</item>
+        <item>BRČELI</item>
+        <item>BRIJEGE</item>
+        <item>BUKOVIK</item>
+        <item>CKLA</item>
+        <item>DABEZIĆI</item>
+        <item>DEDIĆI</item>
+        <item>DOBRE VODE</item>
+        <item>DONJI MURIĆI</item>
+        <item>DUPILO</item>
+        <item>GLUHI DO</item>
+        <item>GODINJE</item>
+        <item>GURZA</item>
+        <item>KOMARNO</item>
+        <item>KOŠTANJICA</item>
+        <item>KRNJICE</item>
+        <item>KUNJE</item>
+        <item>LIMLJANI</item>
+        <item>LIVARI</item>
+        <item>MALA GORANA</item>
+        <item>MARTIĆI</item>
+        <item>MIKULIĆI</item>
+        <item>MIŠIĆI</item>
+        <item>NOVI BAR</item>
+        <item>ORAHOVO</item>
+        <item>OSTROS</item>
+        <item>OVTOČIĆI</item>
+        <item>PEČURICE</item>
+        <item>PELINKOVIĆI</item>
+        <item>PINČIĆI</item>
+        <item>POLJE</item>
+        <item>POPRATINICE</item>
+        <item>SEOCA</item>
+        <item>SOTONIĆI</item>
+        <item>SOZINA</item>
+        <item>STARI BAR</item>
+        <item>SUTOMORE</item>
+        <item>ŠUŠANJ</item>
+        <item>TEJANI</item>
+        <item>TOMBA</item>
+        <item>TOMIĆI</item>
+        <item>TRNOVO</item>
+        <item>TUDJEMILI</item>
+        <item>TURČINI</item>
+        <item>UTRG</item>
+        <item>VELJA GORANA</item>
+        <item>VELJE SELO</item>
+        <item>VIRPAZAR</item>
+        <item>ZALJEVO</item>
+        <item>ZANKOVIĆI</item>
+        <item>ZUPCI</item>
+    </string-array>
+    
+    <string-array name="KO_Berane">
+        <item>ŠEKULAR</item>
+        <item>AZANE</item>
+        <item>BASTAHE</item>
+        <item>BUBANJE</item>
+        <item>BUČE I</item>
+        <item>BUČE II</item>
+        <item>BUDIMLJA</item>
+        <item>CRNI VRH</item>
+        <item>DAPSIĆE I</item>
+        <item>DAPSIĆE II</item>
+        <item>DOBRODOLE</item>
+        <item>DOLAC</item>
+        <item>DONJA RŽANICA</item>
+        <item>DONJE LUGE</item>
+        <item>GLAVACA</item>
+        <item>BERANE</item>
+        <item>JAVOROVO</item>
+        <item>KALUDRA</item>
+        <item>KURIKUĆE</item>
+        <item>LUBNICE</item>
+        <item>LUŽAC</item>
+        <item>PEŠCA</item>
+        <item>PETNJICA</item>
+        <item>PETNJIK I</item>
+        <item>PETNJIK II</item>
+        <item>POLICA</item>
+        <item>PRAČEVAC</item>
+        <item>RADMANCI</item>
+        <item>ROVCA</item>
+        <item>RUJIŠTA</item>
+        <item>SAVIN BOR</item>
+        <item>SKAKAVAC</item>
+        <item>ŠTITARI</item>
+        <item>TRPEZI</item>
+        <item>TUCANJE</item>
+        <item>VINICKA I</item>
+        <item>VINICKA II</item>
+        <item>VRBICA</item>
+        <item>VUČA (BERANSKA)</item>
+        <item>ZAGORJE</item>
+        <item>ZAGRAD</item>
+        <item>ZAOSTRO</item>
+    </string-array>
+    
+    <string-array name="KO_Bijelo_Polje">
+        <item>BABAJIĆI</item>
+        <item>BARICE</item>
+        <item>BIJELO POLJE</item>
+        <item>BISTRICA</item>
+        <item>BLIŠKOVO</item>
+        <item>BOJIŠTA</item>
+        <item>BOLJANIN</item>
+        <item>CEROVO</item>
+        <item>CRNČA-LAHOLO</item>
+        <item>CRNIŠ</item>
+        <item>ČEOČE</item>
+        <item>ČOKRLIJE</item>
+        <item>DOBRAKOVO</item>
+        <item>DOBRINJE</item>
+        <item>DUBOVO</item>
+        <item>FEMIĆA KRŠ</item>
+        <item>GODIJEVO</item>
+        <item>GODUŠA</item>
+        <item>GRAB</item>
+        <item>GRANČAREVO</item>
+        <item>GUBAVAČ</item>
+        <item>IVANJE</item>
+        <item>JABLANOVO</item>
+        <item>JABUČNO</item>
+        <item>KANJE</item>
+        <item>KIČAVA</item>
+        <item>KORITA</item>
+        <item>KOSTENICA</item>
+        <item>KOVREN</item>
+        <item>KRADENIK</item>
+        <item>KUKULJE</item>
+        <item>LEKOVINA</item>
+        <item>LIJESKA</item>
+        <item>LOZNA</item>
+        <item>LJEŠNICA</item>
+        <item>MAJSTOROVINA</item>
+        <item>METANJAC</item>
+        <item>MILOVO</item>
+        <item>MIOČE</item>
+        <item>MOJSTIR</item>
+        <item>MUSLIĆI</item>
+        <item>NEDAKUSE</item>
+        <item>NEGOBRATINA</item>
+        <item>NJEGNJEVO</item>
+        <item>ORAHOVICA</item>
+        <item>PALI</item>
+        <item>PAPE</item>
+        <item>PAVINO POLJE</item>
+        <item>PEĆARSKA</item>
+        <item>PODA</item>
+        <item>POTKRAJCI</item>
+        <item>POTRK</item>
+        <item>PRIJELOZI</item>
+        <item>RADULIĆE</item>
+        <item>RASOVO</item>
+        <item>RAVNA RIJEKA</item>
+        <item>RESNIK</item>
+        <item>SIPANJE</item>
+        <item>SOKOLAC</item>
+        <item>SREDNJE BRDO</item>
+        <item>STOŽER</item>
+        <item>TOMAŠEVO</item>
+        <item>UJNIČE</item>
+        <item>UNEVINA</item>
+        <item>VOLJAVAC</item>
+        <item>ZATON</item>
+        <item>BP-NOVO STANJE</item>
+        <item>CRNČA-LAHOLO - A</item>
+        <item>DUBOVO - A</item>
+        <item>PODA - A</item>
+        <item>ZATON - A</item>
+    </string-array>
+
+    <string-array name="KO_Budva">
+        <item>BEČIĆI</item>
+        <item>BULJARICA I</item>
+        <item>BULJARICA II</item>
+        <item>KRUŠEVICA</item>
+        <item>KULJAČE</item>
+        <item>PETROVAC</item>
+        <item>REŽEVIĆI I</item>
+        <item>REŽEVIĆI II</item>
+        <item>SVETI STEFAN</item>
+        <item>TUDOROVIĆI</item>
+        <item>BRAJIĆI</item>
+        <item>BUDVA</item>
+        <item>MAINE</item>
+        <item>POBORI</item>
+        <item>PRIJEVOR I</item>
+        <item>PRIJEVOR II</item>
+    </string-array>
+
+    <string-array name="KO_Cetinje">
+        <item>BAJICE</item>
+        <item>BATA</item>
+        <item>BOBIJA</item>
+        <item>CEKLIN</item>
+        <item>CETINJE I</item>
+        <item>CETINJE II</item>
+        <item>ĆEKLIĆI</item>
+        <item>ČEVO</item>
+        <item>ČUKOVIĆI</item>
+        <item>DOBRSKO SELO</item>
+        <item>DODOŠI</item>
+        <item>DRUŠIĆI</item>
+        <item>ĐINOVIĆI</item>
+        <item>GRAB</item>
+        <item>GRAĐANI</item>
+        <item>KOBILJI DO</item>
+        <item>KONAK</item>
+        <item>LASTVA</item>
+        <item>LJUBOTINJ1</item>
+        <item>LJUBOTINJ2</item>
+        <item>MARKOVINA</item>
+        <item>METERIZI</item>
+        <item>MIHAILOVIĆI</item>
+        <item>NJEGUŠI</item>
+        <item>PREDIŠ</item>
+        <item>PRENTIN DO</item>
+        <item>PREVLAKA</item>
+        <item>RESNA</item>
+        <item>RIJEČANI</item>
+        <item>RIJEKA CRNOJEVIĆA</item>
+        <item>RVAŠI</item>
+        <item>ŠTITARI</item>
+        <item>TREŠNJEVO</item>
+        <item>UBLI</item>
+        <item>VELESTOVO</item>
+        <item>ŽABLJAK</item>
+    </string-array>
+    
+    <string-array name="KO_Danilovgrad">
+        <item>BANDIĆI</item>
+        <item>BARE</item>
+        <item>BRIJESTOVO I</item>
+        <item>BRIJESTOVO II</item>
+        <item>ĆURČIĆI</item>
+        <item>ĆURILAC</item>
+        <item>DANILOVGRAD</item>
+        <item>DONJI ZAGARAČ</item>
+        <item>GLAVICA</item>
+        <item>GLIZICE</item>
+        <item>GORICA</item>
+        <item>GORNJI ZAGARAČ</item>
+        <item>GOSTILJE I</item>
+        <item>GOSTILJE II</item>
+        <item>GRBE</item>
+        <item>GRLIĆ</item>
+        <item>JASTREB</item>
+        <item>JELENAK</item>
+        <item>KOSIĆ</item>
+        <item>KUJAVA</item>
+        <item>MARTINIĆI</item>
+        <item>MEDJEDJE I</item>
+        <item>MEDJEDJE II</item>
+        <item>NOVO SELO</item>
+        <item>PAŽIĆI</item>
+        <item>PODGLAVICE</item>
+        <item>PODKRAJ</item>
+        <item>RŽIŠTA</item>
+        <item>SLAP</item>
+        <item>SLATINA I</item>
+        <item>SLATINA II</item>
+        <item>SPUŽ</item>
+        <item>VRELA</item>
+        <item>ZAGORAK</item>
+        <item>ZAGREDA</item>
+    </string-array>
+    
+    <string-array name="KO_Herceg_Novi">
+        <item>BABUNCI</item>
+        <item>BAOŠIĆI</item>
+        <item>BIJELA</item>
+        <item>BJELSKE KRUŠEVICE</item>
+        <item>BRGULI</item>
+        <item>ĐENOVIĆI</item>
+        <item>ĐURIĆI</item>
+        <item>KRUŠEVICE</item>
+        <item>HERCEG-NOVI</item>
+        <item>JOŠICA</item>
+        <item>KAMENO</item>
+        <item>KUMBOR</item>
+        <item>KUTI</item>
+        <item>MOJDEŽ</item>
+        <item>MOKRINE</item>
+        <item>MRKOVI</item>
+        <item>PODI</item>
+        <item>RADOVANIĆI</item>
+        <item>RATIŠEVINA</item>
+        <item>ROSE</item>
+        <item>SASOVIĆI</item>
+        <item>SUTORINA</item>
+        <item>TOPLA</item>
+        <item>TREBESIN</item>
+        <item>UBLI</item>
+        <item>ZABRĐE</item>
+        <item>ŽLIJEBI</item>
+    </string-array>
+    
+    <string-array name="KO_Kolašin">
+        <item>BABLJAK</item>
+        <item>BAKOVIĆI</item>
+        <item>BARE</item>
+        <item>BLATINA</item>
+        <item>DONJA TARA</item>
+        <item>DRAGOVIĆA POLJE</item>
+        <item>DRIJENAK</item>
+        <item>DRPE</item>
+        <item>IZLASCI</item>
+        <item>JABUKA</item>
+        <item>KOLAŠIN</item>
+        <item>KOS</item>
+        <item>KRALJSKE BARE</item>
+        <item>LIPOVO</item>
+        <item>LIPOVSKA BISTRICA</item>
+        <item>MATEŠEVO</item>
+        <item>MEDJURIJEČJE</item>
+        <item>MORAČKO TREBALJEVO</item>
+        <item>MUŠOVIĆA RIJEKA</item>
+        <item>OSREDCI</item>
+        <item>PADEŽ</item>
+        <item>PLANA</item>
+        <item>RADIGOJNO</item>
+        <item>RAŠKO MIOSKA</item>
+        <item>ROVAČKO TREBALJEVO</item>
+        <item>SELA</item>
+        <item>SMAILAGIĆA POLJE</item>
+        <item>SMRČJE</item>
+        <item>STARČE</item>
+        <item>SUNGA</item>
+        <item>TRUNIĆA DO</item>
+        <item>ULICA</item>
+        <item>VELJE DUBOKO I LIJEŠNJE</item>
+        <item>VLADOŠ</item>
+        <item>VLAHOVIĆI I BULATOVIĆI</item>
+        <item>VOJKOVIĆI</item>
+        <item>VRANJEŠTICA</item>
+        <item>ŽIRCI</item>
+    </string-array>
+    
+    <string-array name="KO_Kotor">
+        <item>DOBROTA I</item>
+        <item>DOBROTA II</item>
+        <item>DUB</item>
+        <item>GLAVATI</item>
+        <item>GLAVATIČIĆI</item>
+        <item>GOROVIĆI</item>
+        <item>KAVAČ</item>
+        <item>KOSTANJICA</item>
+        <item>KOTOR I</item>
+        <item>KOTOR II</item>
+        <item>KOVAČI</item>
+        <item>KRIMOVICE</item>
+        <item>KRIVOŠIJE DONJE</item>
+        <item>KRIVOŠIJE GORNJE</item>
+        <item>KUBASI</item>
+        <item>LASTVA</item>
+        <item>LEDENICE DONJE</item>
+        <item>LEDENICE GORNJE</item>
+        <item>LJEŠEVIĆI</item>
+        <item>MIRAC</item>
+        <item>MORINJ</item>
+        <item>MUO I</item>
+        <item>MUO II</item>
+        <item>NALJEŽIĆI</item>
+        <item>ORAHOVAC I</item>
+        <item>ORAHOVAC II</item>
+        <item>PELINOVO</item>
+        <item>PERAST</item>
+        <item>POBRDJE</item>
+        <item>PRČANJ I</item>
+        <item>PRČANJ II</item>
+        <item>PRIJERADI</item>
+        <item>RISAN I</item>
+        <item>RISAN II</item>
+        <item>STOLIV I</item>
+        <item>STOLIV II</item>
+        <item>STRP</item>
+        <item>SUTVARA</item>
+        <item>ŠIŠIĆI</item>
+        <item>ŠKALJARI I</item>
+        <item>ŠKALJARI II</item>
+        <item>ŠPILJARI</item>
+        <item>VIŠNJEVO</item>
+        <item>VRANOVIĆI</item>
+        <item>ZAGORA</item>
+        <item>ZALAZI</item>
+        <item>PRIVREDNA ZONA</item>
+    </string-array>
+
+    <string-array name="KO_Mojkovac">
+        <item>BJELOJEVIĆI</item>
+        <item>GOSTILOVINA</item>
+        <item>JAKOVIĆI</item>
+        <item>LEPENAC</item>
+        <item>PROŠĆENSKE PLANINE</item>
+        <item>SLATINA</item>
+        <item>STEVANOVAC</item>
+        <item>TUTIĆI</item>
+        <item>ŽARI</item>
+        <item>MOJKOVAC</item>
+        <item>BISTRICA</item>
+        <item>DOBRILOVINA</item>
+        <item>DONJA POLJA</item>
+        <item>GOJAKOVIĆI</item>
+        <item>GORNJA POLJA</item>
+        <item>PODBIŠĆE</item>
+        <item>SINJAVINA</item>
+        <item>ŠTITARICA</item>
+    </string-array>
+
+    <string-array name="KO_Nikšić">
+        <item>BIJELA GORA</item>
+        <item>BJELOŠEVINA I</item>
+        <item>BOGETIĆI</item>
+        <item>BRESTICE</item>
+        <item>BREZOVIK</item>
+        <item>BROĆANAC</item>
+        <item>BROĆANAC GRAHOVSKI</item>
+        <item>BRŠNO</item>
+        <item>BUSAK</item>
+        <item>ČARADJE</item>
+        <item>ĆERANIĆA GORA</item>
+        <item>DONJE CRKVICE</item>
+        <item>DONJE SRIJEDE</item>
+        <item>DRENOŠTICA</item>
+        <item>DUBOČKE</item>
+        <item>DUČICE</item>
+        <item>GLIBAVAC</item>
+        <item>GORNJE CRKVICE</item>
+        <item>GORNJI KAZANCI</item>
+        <item>GOSLIĆ</item>
+        <item>GRADAČKA POLJANA</item>
+        <item>GRAHOVAC</item>
+        <item>GRAHOVO</item>
+        <item>GRANICE</item>
+        <item>JABUKA</item>
+        <item>JASENOVO POLJE</item>
+        <item>JAVLJEN</item>
+        <item>JUGOVIĆI</item>
+        <item>KAMENSKO</item>
+        <item>KLENAK</item>
+        <item>KLIČEVO</item>
+        <item>KOČANI</item>
+        <item>KONJSKO</item>
+        <item>KOPRIVICE</item>
+        <item>KOVAČI</item>
+        <item>KRNJAČA</item>
+        <item>KRSTAC</item>
+        <item>KUNAK</item>
+        <item>KUSIDE</item>
+        <item>KUTA I</item>
+        <item>LIVEROVIĆI</item>
+        <item>LUKOVO</item>
+        <item>MACAVARE</item>
+        <item>MILOČANI</item>
+        <item>MILOJEVIĆI</item>
+        <item>MIRUŠE</item>
+        <item>MOKRA NJIVA</item>
+        <item>MORAKOVO</item>
+        <item>MUŽEVICE</item>
+        <item>NIKŠIĆ</item>
+        <item>NUDO</item>
+        <item>ORAH</item>
+        <item>OZRINIĆI</item>
+        <item>PETROVIĆI</item>
+        <item>PILATOVCI</item>
+        <item>POČEKOVIĆI</item>
+        <item>PODVRŠ</item>
+        <item>POVIJA</item>
+        <item>PRAGA</item>
+        <item>PRESJEKA</item>
+        <item>RASTOVAC</item>
+        <item>RUBEŽA</item>
+        <item>RUDINE</item>
+        <item>SJENOKOSI</item>
+        <item>SMRDUŠA</item>
+        <item>SOMINA</item>
+        <item>STRAŠEVINA</item>
+        <item>STUBA</item>
+        <item>STUBICA</item>
+        <item>STUBIČKI KRAJ</item>
+        <item>ŠTEDIM</item>
+        <item>TREPČA</item>
+        <item>TUPAN</item>
+        <item>VELIMLJE</item>
+        <item>VILUSI</item>
+        <item>VIR</item>
+        <item>VIŠNJIĆA DO</item>
+        <item>VRAĆENOVIĆI</item>
+        <item>VRBICA</item>
+        <item>ZAGORA</item>
+        <item>ZAGRAD I</item>
+        <item>ZALJUTNICA</item>
+        <item>ŠIPAČNO I</item>
+        <item>ŠIPAČNO II</item>
+        <item>ZAGRAD II</item>
+        <item>DRAGOVOLJIĆI I</item>
+        <item>DRAGOVOLJIĆI II</item>
+        <item>BRŠNOII</item>
+        <item>KUTA II</item>
+        <item>MORAKOVO II</item>
+        <item>BJELOŠEVINA II</item>
+        <item>BRŠNO I</item>
+        <item>MORAKOVO I</item>
+    </string-array>
+
+    <string-array name="KO_Plav">
+        <item>BOGAJIĆE</item>
+        <item>BREZOJEVICE I</item>
+        <item>BREZOJEVICE II</item>
+        <item>DESNI METEH</item>
+        <item>DOLJA</item>
+        <item>DOSUĐE I</item>
+        <item>DOSUDJE II</item>
+        <item>DJ.RIJEKA</item>
+        <item>G.RŽANICA</item>
+        <item>GRNČAR</item>
+        <item>GUSINJE</item>
+        <item>HOTI</item>
+        <item>KRUŠEVO I</item>
+        <item>KRUŠEVO II</item>
+        <item>MARTINOVIĆE I</item>
+        <item>MARTINOVIĆE II</item>
+        <item>MAŠNICA</item>
+        <item>MURINA</item>
+        <item>NOVIŠĆE</item>
+        <item>PLAV</item>
+        <item>PRNJAVOR</item>
+        <item>SKIĆ</item>
+        <item>VELIKA</item>
+        <item>VOJNO SELO I</item>
+        <item>VOJNO SELO II</item>
+        <item>VUSANJE</item>
+    </string-array>
+
+    <string-array name="KO_Pljevlja">
+        <item>BOBOVO</item>
+        <item>BOLJANIĆI</item>
+        <item>BOROVA</item>
+        <item>BRVENICA</item>
+        <item>BUJACI</item>
+        <item>CRLJENICE</item>
+        <item>CRNI VRH</item>
+        <item>DONJA BRVENICA</item>
+        <item>GLIBAĆI</item>
+        <item>GLISNICA</item>
+        <item>GOTOVUŠA</item>
+        <item>GRADAC</item>
+        <item>GRADINA</item>
+        <item>HOĆEVINA</item>
+        <item>ILINO BRDO I</item>
+        <item>ILINO BRDO II</item>
+        <item>JUGOVO</item>
+        <item>KATUN</item>
+        <item>KOSANICA</item>
+        <item>KOVAČEVIĆI</item>
+        <item>KOZICA</item>
+        <item>KRUPICE</item>
+        <item>KRUŠEVO</item>
+        <item>LEVER TARA</item>
+        <item>LJUTIĆI</item>
+        <item>MAOČE</item>
+        <item>MATARUGE</item>
+        <item>MELJAK</item>
+        <item>OBARDE</item>
+        <item>OGRAĐENICA</item>
+        <item>ORLJA</item>
+        <item>OTILOVIĆI</item>
+        <item>PLANSKO</item>
+        <item>PLJEVLJA</item>
+        <item>POBLAĆE</item>
+        <item>POTKOVAČ</item>
+        <item>POTKRAJCI</item>
+        <item>POTOCI I</item>
+        <item>POTOCI II</item>
+        <item>PRENĆANI</item>
+        <item>RAĐEVIĆI</item>
+        <item>STREČANJE</item>
+        <item>ŠLJIVANSKO</item>
+        <item>ŠUMANE I</item>
+        <item>ŠUMANE II</item>
+        <item>TVRDAKOVIĆI</item>
+        <item>VARINE</item>
+        <item>VAŠKOVO</item>
+        <item>VELIKE KRĆE</item>
+        <item>VIJENAC</item>
+        <item>VRULJA</item>
+        <item>ZMAJEVAC</item>
+        <item>ZEKAVICE</item>
+        <item>ŽIDOVIĆI I</item>
+        <item>ŽIDOVIĆI II</item>
+    </string-array>
+
+    <string-array name="KO_Plužine">
+        <item>BAJOVO POLJE</item>
+        <item>BEZUJE</item>
+        <item>BORIČJE</item>
+        <item>BORKOVIĆI</item>
+        <item>BRIJEG</item>
+        <item>BRLJEVO</item>
+        <item>DONJA BREZNA</item>
+        <item>DUBA</item>
+        <item>DUBLJEVIĆI</item>
+        <item>GORANJSKO</item>
+        <item>GORNJA BREZNA</item>
+        <item>JASEN</item>
+        <item>JERINIĆI</item>
+        <item>MILOŠEVIĆI</item>
+        <item>MILJKOVAC</item>
+        <item>MRATINJE</item>
+        <item>NEDAJNO</item>
+        <item>NIKOVIĆI</item>
+        <item>PIŠČE</item>
+        <item>PLUŽINE</item>
+        <item>RAVNO</item>
+        <item>RUDINICE</item>
+        <item>SELJANI</item>
+        <item>SMRIJEČNO</item>
+        <item>STABNA</item>
+        <item>STUBICA</item>
+        <item>TRSA</item>
+        <item>VOJINOVIĆI</item>
+        <item>VOJVODIĆI</item>
+        <item>VUČEVO</item>
+        <item>UNAČ</item>
+        <item>ŠARIĆI</item>
+        <item>CRKVIČKO POLJE</item>
+    </string-array>
+
+    <string-array name="KO_Podgorica">
+        <item>BALOČI</item>
+        <item>BERI</item>
+        <item>BEZJOVO</item>
+        <item>BIJELO POLJE</item>
+        <item>BIOČE</item>
+        <item>BLIZNA</item>
+        <item>BOLJESESTRE</item>
+        <item>BOTUN</item>
+        <item>BREŽINE</item>
+        <item>BRSKUT</item>
+        <item>BUDZA</item>
+        <item>BURONJE</item>
+        <item>CEROVICE</item>
+        <item>CIJEVNA</item>
+        <item>CRNCI</item>
+        <item>CVARIN</item>
+        <item>DAJBABE</item>
+        <item>DINOŠA</item>
+        <item>DOLOVI</item>
+        <item>DOLJANI</item>
+        <item>DONJA GORICA</item>
+        <item>DONJE STRAVČE</item>
+        <item>DONJI KOKOTI</item>
+        <item>DONJI ZATRIJEBAČ</item>
+        <item>DRAŽEVINA</item>
+        <item>DUŠKE</item>
+        <item>ĐURKOVIĆI</item>
+        <item>FARMACI</item>
+        <item>FUNDINA</item>
+        <item>GOLUBOVCI</item>
+        <item>GOLJEMADI</item>
+        <item>GORNJE STRAVČE</item>
+        <item>GORNJI ZATRIJEBAČ</item>
+        <item>GOSTILJ</item>
+        <item>GRADAC</item>
+        <item>GRBAVCI</item>
+        <item>GRBI DO</item>
+        <item>GRUDA</item>
+        <item>HOTI</item>
+        <item>KLOPOT</item>
+        <item>KOĆI</item>
+        <item>KOPILJE</item>
+        <item>KRŽANJA</item>
+        <item>LIJEŠNJE</item>
+        <item>LIJEVA RIJEKA</item>
+        <item>LOPATE</item>
+        <item>LUTOVO</item>
+        <item>MAHALA</item>
+        <item>MASLINE</item>
+        <item>MATAGUŽI</item>
+        <item>MEDUN</item>
+        <item>MOMČE</item>
+        <item>MRKE</item>
+        <item>OPASANICA</item>
+        <item>ORAHOVO</item>
+        <item>ORASI</item>
+        <item>PELEV BRIJEG</item>
+        <item>PROGONOVIĆI</item>
+        <item>RADEĆA</item>
+        <item>RADOVČE</item>
+        <item>RIJEKA</item>
+        <item>ROGAMI</item>
+        <item>SEOCA</item>
+        <item>SLACKO</item>
+        <item>STANJEVIĆA RUPE</item>
+        <item>STARI TRABUJIN</item>
+        <item>STUPOVI</item>
+        <item>PODGORICA I</item>
+        <item>PODGORICA II</item>
+        <item>PODGORICA III</item>
+        <item>TOLOŠI</item>
+        <item>TREBJEŠICA</item>
+        <item>TRMANJE</item>
+        <item>TUZI</item>
+        <item>UBLI</item>
+        <item>VELJE BRDO</item>
+        <item>VERUŠA</item>
+        <item>VRANJ</item>
+        <item>VRANJINA</item>
+        <item>VRBICA</item>
+        <item>VUKOVCI</item>
+        <item>VUKSAN LEKIĆ</item>
+    </string-array>
+
+    <string-array name="KO_Rožaje">
+        <item>BAĆ</item>
+        <item>BALOTIĆE</item>
+        <item>BAŠČA</item>
+        <item>BESNIK</item>
+        <item>BIJELA CRKVA</item>
+        <item>BIŠEVO</item>
+        <item>BUKOVICA</item>
+        <item>DACIĆE</item>
+        <item>DONJA LOVNICA</item>
+        <item>GORNJA LOVNICA</item>
+        <item>GRAHOVO I</item>
+        <item>GRAHOVO II</item>
+        <item>GRIŽICA</item>
+        <item>IBARAC I</item>
+        <item>IBARAC II</item>
+        <item>JABLANICA</item>
+        <item>KALAČE</item>
+        <item>KOLJENO I</item>
+        <item>KOLJENO II</item>
+        <item>PAUČINA</item>
+        <item>PLUNCI I</item>
+        <item>PLUNCI II</item>
+        <item>RADETINA</item>
+        <item>ROŽAJE</item>
+        <item>SEOŠNICA</item>
+        <item>VUČA</item>
+    </string-array>
+
+    <string-array name="KO_Šavnik">
+        <item>BOAN</item>
+        <item>DONJA BIJELA</item>
+        <item>DONJA BUKOVICA</item>
+        <item>DUBROVSKO</item>
+        <item>DUŽI</item>
+        <item>GORNJA BIJELA</item>
+        <item>GORNJA BUKOVICA</item>
+        <item>GRABOVICA</item>
+        <item>KOMARNICA</item>
+        <item>KRNJA JELA</item>
+        <item>MALINSKO</item>
+        <item>MILOŠEVIĆI</item>
+        <item>MLJETIČAK</item>
+        <item>MOKRO</item>
+        <item>PETNJICA</item>
+        <item>POŠĆENJE</item>
+        <item>SLATINA</item>
+        <item>TIMAR</item>
+        <item>TUŠINJA</item>
+        <item>ŠAVNIK</item>
+    </string-array>
+    <string-array name="KO_Tivat">
+        <item>BOGDAŠIĆI</item>
+        <item>BOGIŠIĆI</item>
+        <item>DONJA LASTVA</item>
+        <item>ĐURAŠEVIĆI</item>
+        <item>GORNJA LASTVA</item>
+        <item>GOŠIĆI</item>
+        <item>KRAŠIĆI</item>
+        <item>LEPETANE</item>
+        <item>MILOVIĆI</item>
+        <item>MRČEVAC</item>
+        <item>NIKOVIĆI</item>
+        <item>RADOVIĆI</item>
+        <item>TIVAT</item>
+    </string-array>
+
+    <string-array name="KO_Ulcinj">
+        <item>BOJKE</item>
+        <item>BRAJŠA</item>
+        <item>BRATICA</item>
+        <item>BRISKA GORA</item>
+        <item>DARZA</item>
+        <item>DONJI ŠTOJ</item>
+        <item>FRASKANJEL</item>
+        <item>GORNJI ŠTOJ</item>
+        <item>KLEZNA</item>
+        <item>KOLOMZA</item>
+        <item>KRAVARI</item>
+        <item>KRUČE</item>
+        <item>KRUTE ULCINJSKE</item>
+        <item>KRUTE VLADIMIRSKE</item>
+        <item>LESKOVAC</item>
+        <item>LISNA BORI</item>
+        <item>MEDJUREČ</item>
+        <item>MIDE</item>
+        <item>PISTULA</item>
+        <item>RASTIŠ</item>
+        <item>REČ</item>
+        <item>SALČ</item>
+        <item>SUKOBIN</item>
+        <item>SVETI ĐORĐE</item>
+        <item>ŠAS</item>
+        <item>ŠTODRA</item>
+        <item>ULCINJ</item>
+        <item>ULCINJSKO POLJE</item>
+        <item>VLADIMIR</item>
+        <item>ZOGANJE</item>
+    </string-array>
+
+    <string-array name="KO_Žabljak">
+        <item>BORJE I</item>
+        <item>BORJE II</item>
+        <item>BRAJKOVAČA</item>
+        <item>CRNA GORA</item>
+        <item>KRŠ</item>
+        <item>MOTIČKI GAJ I</item>
+        <item>MOTIČKI GAJ II</item>
+        <item>NOVAKOVIĆI I</item>
+        <item>NOVAKOVIĆI II</item>
+        <item>NJEGOVUĐA</item>
+        <item>PAŠINA VODA I</item>
+        <item>PAŠINA VODA II</item>
+        <item>TEPCA</item>
+        <item>ŽABLJAK I</item>
+        <item>ŽABLJAK II</item>
+    </string-array>
+</resources>

@@ -4,25 +4,48 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TabHost;
+import android.widget.Spinner;
 
 import com.example.ruben.webapp.Service.FormService;
 import com.joanzapata.android.iconify.Iconify;
 
 
 public class NewItemActivity extends ActionBarActivity {
-    FormService formController;
-
+    FormService formService;
+    Spinner communitySpinner;
+    Spinner koSpinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_object);
         Iconify.addIcons((Button) findViewById(R.id.btnSaveItem));
-        this.formController = new FormService();
-        this.formController.datePickerAction((EditText) findViewById(R.id.building_date),this);
-        this.initTabs();
+        this.communitySpinner = (Spinner) findViewById(R.id.community_input);
+        this.koSpinner = (Spinner) findViewById(R.id.ko_input_spinner);
+
+        this.formService = new FormService(this);
+        this.formService.datePickerAction((EditText) findViewById(R.id.building_date),this);
+        this.formService.populateSpinner(
+                this.communitySpinner, R.array.community_list
+        );
+        this.communitySpinner.setOnItemSelectedListener(
+                new AdapterView.OnItemSelectedListener() {
+                    @Override
+                    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                        String community = "KO_"+parent.getItemAtPosition(pos).toString().replace(" ","_");
+                        int community_id = getResources().getIdentifier(community,"array",getPackageName());
+                        formService.populateSpinner(koSpinner, community_id);
+                    }
+                    @Override
+                    public void onNothingSelected(AdapterView<?> adapterView) {
+
+                    }
+                }
+        );
+        //this.initTabs();
     }
 
 
@@ -48,22 +71,21 @@ public class NewItemActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void initTabs () {
-        TabHost tabs = (TabHost) findViewById(R.id.tabHost);
-
-        tabs.setup();
-
-        TabHost.TabSpec spec = tabs.newTabSpec("tag1");
-
-        spec.setContent(R.id.tab1);
-        spec.setIndicator(getString(R.string.owner_info));
-        tabs.addTab(spec);
-
-        spec = tabs.newTabSpec("tag2");
-        spec.setContent(R.id.tab2);
-        spec.setIndicator(getString(R.string.object_info));
-        tabs.addTab(spec);
-
-        tabs.setCurrentTab(0);
-    }
+//    public void initTabs () {
+//        TabHost tabs = (TabHost) findViewById(R.id.tabHost);
+//        tabs.setup();
+//
+//        TabHost.TabSpec spec = tabs.newTabSpec("tag1");
+//
+//        spec.setContent(R.id.tab1);
+//        spec.setIndicator(getString(R.string.owner_info));
+//        tabs.addTab(spec);
+//
+//        spec = tabs.newTabSpec("tag2");
+//        spec.setContent(R.id.tab2);
+//        spec.setIndicator(getString(R.string.object_info));
+//        tabs.addTab(spec);
+//
+//        tabs.setCurrentTab(0);
+//    }
 }

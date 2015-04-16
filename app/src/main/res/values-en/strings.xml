@@ -27,4 +27,14 @@
     <string name="ko">KO</string>
     <string name="real_estate_list_number">Real estate number</string>
     <string name="flat_pd">Flat PD</string>
+    <string name="object_type">Object type</string>
+        <string name="object_type_land">Land</string>
+        <string name="object_type_house">House</string>
+        <string name="object_type_flat">Flat</string>
+        <string name="object_type_office">Office</string>
+        <string name="object_type_hotel">Hotel</string>
+    <string name="sea_view">Sea view</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+
 </resources>
