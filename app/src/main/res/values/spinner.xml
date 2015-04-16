@@ -888,4 +888,120 @@
         <item>ŽABLJAK I</item>
         <item>ŽABLJAK II</item>
     </string-array>
+
+    <string-array name="object_material">
+        <item>камень</item>
+        <item>бетон</item>
+        <item>блок или кирпич</item>
+        <item>дерево</item>
+        <item>монтажный</item>
+    </string-array>
+
+    <string-array name="fasad_type">
+        <item>покраска</item>
+        <item>фасадная отделка</item>
+        <item>обложен камнем</item>
+        <item>фасадный камень</item>
+    </string-array>
+
+    <string-array name="roof_type">
+        <item>деревянная конструкция</item>
+        <item>бетонная плита</item>
+        <item>монтажная конструкция</item>
+        <item>металлическая конструкция</item>
+    </string-array>
+    
+    <string-array name="window_type">
+        <item>деревянные</item>
+        <item>люминевые</item>
+        <item>ПВХ</item>
+    </string-array>
+    
+    <string-array name="object_info">
+        <item>зарегистрирован в кадастре</item>
+        <item>не полностью зарегистрирован</item>
+        <item>не зарегистрирован</item>
+    </string-array>
+
+    <string-array name="documents">
+        <item>нет разрешение</item>
+        <item>разрешение есть не на все</item>
+        <item>есть разрешение</item>
+    </string-array>
+
+    <string-array name="wetness">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+    
+    <string-array name="television">
+        <item>спутник</item>
+        <item>кабельное</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="floor_type">
+        <item>камень</item>
+        <item>керамика</item>
+        <item>паркет</item>
+        <item>ламинат</item>
+        <item>деревянный</item>
+        <item>бетонный</item>
+    </string-array>
+
+    <string-array name="terrace">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="electricity">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="water">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="waste_watter">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="heat_type">
+        <item>элекрическое</item>
+        <item>паровое</item>
+        <item>сплит система</item>
+        <item>дровяное</item>
+        <item>теплый пол</item>
+    </string-array>
+
+    <string-array name="garage">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="basement">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="supply_object">
+        <item>да</item>
+        <item>нет</item>
+    </string-array>
+
+    <string-array name="water_supply">
+        <item>городское</item>
+        <item>колодец</item>
+        <item>источник</item>
+        <item>привозная</item>
+    </string-array>
+
+    <string-array name="waste_water_disposal">
+        <item>городская</item>
+        <item>септик</item>
+    </string-array>
+
 </resources>

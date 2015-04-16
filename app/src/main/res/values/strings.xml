@@ -41,5 +41,36 @@
         <string name="halls">залов</string>
         <string name="bedrooms">спален</string>
         <string name="kitchens">кухонь</string>
+    <string name="object_material_type">Объект построен из</string>
+    <string name="fasad_type">Вид фасада</string>
+    <string name="roof">Вид фасада</string>
+    <string name="windows">Окна</string>
+    <string name="object_documents">Объект</string>
+    <string name="license">Легальность</string>
+    <string name="wetness">Влага</string>
+    <string name="television">ТВ</string>
+    <string name="floor">пол</string>
+    <string name="terrace">Tepaса</string>
+    <string name="electricity">Электричество</string>
+    <string name="water">Вода</string>
+    <string name="waste_water">Канализация</string>
+    <string name="heat_type">Тип отопление</string>
+    <string name="garage">Гараж</string>
+    <string name="basement">Подвал</string>
+    <string name="supply_object">Вспомогательные объекты</string>
+    <string name="water_supply">Вид водоснабжения</string>
+    <string name="waste_water_disposal">Вид канализации</string>
+    <string name="watter_container">Резервуар для воды</string>
+    <string name="parking">Паркинг</string>
+    <string name="lift">Лифт</string>
+    <string name="phone_availability">Телефон</string>
+    <string name="interphone">Интерфон</string>
+    <string name="video_recording">Видео наблюдение</string>
+    <string name="pool">Бассейн</string>
+    <string name="pool_construction_site">Возможность строительства бассейна</string>
+    <string name="terrace_fence">Ограда терасы</string>
+    <string name="garden_fence">Ограда двора</string>
+    <string name="furniture_available">Продается с мебелью</string>
+    <string name="others">Другое</string>
 
 </resources>
