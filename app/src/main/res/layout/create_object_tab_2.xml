@@ -3,13 +3,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/form_opject_info"
-        android:layout_above="@+id/btnSaveItem">
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/form_opject_info">
 
         <TableLayout
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content">
             <TableRow
                 android:layout_width="fill_parent"
@@ -22,7 +21,7 @@
                     android:text="@string/community"
                     android:id="@+id/community_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <Spinner
@@ -66,7 +65,7 @@
                     android:text="@string/building_date"
                     android:id="@+id/building_date_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -89,7 +88,7 @@
                     android:text="@string/sea_distance"
                     android:id="@+id/sea_distance_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -111,7 +110,7 @@
                     android:text="@string/object_area"
                     android:id="@+id/object_area_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -136,7 +135,7 @@
                     android:text="@string/object_land_area"
                     android:id="@+id/object_land_area_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -160,7 +159,7 @@
                     android:text="@string/land_marks"
                     android:id="@+id/land_marks_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -182,7 +181,7 @@
                     android:text="@string/bedrooms_count"
                     android:id="@+id/bedrooms_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -206,7 +205,7 @@
                     android:text="@string/floors"
                     android:id="@+id/floors_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -230,7 +229,7 @@
                     android:text="@string/neighbors"
                     android:id="@+id/neighbors_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -252,7 +251,7 @@
                     android:text="@string/ko"
                     android:id="@+id/ko_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <Spinner
@@ -275,7 +274,7 @@
                     android:text="@string/real_estate_list_number"
                     android:id="@+id/real_estate_list_number_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -297,7 +296,7 @@
                     android:text="@string/flat_pd"
                     android:id="@+id/flat_pd_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <EditText
@@ -321,14 +320,16 @@
                     android:text="@string/object_type"
                     android:id="@+id/object_type_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material" />
 
                 <RadioGroup
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:id="@+id/object_type">
 
                     <RadioButton
                         android:layout_width="wrap_content"
@@ -383,21 +384,24 @@
                     android:text="@string/sea_view"
                     android:id="@+id/sea_view_label"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
-                    android:textSize="@dimen/abc_text_size_small_material" />
+                    android:layout_weight="0.5"
+                    android:textSize="@dimen/abc_text_size_small_material"
+                    android:paddingTop="5dp" />
 
                 <RadioGroup
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:layout_weight="1" >
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:id="@+id/sea_view">
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/yes"
                         android:id="@+id/sea_view_yes"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.2"
                         android:checked="false" />
 
                     <RadioButton
@@ -405,7 +409,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/no"
                         android:id="@+id/sea_view_no"
-                        android:layout_weight="0.5"
+                        android:layout_weight="0.2"
                         android:checked="false" />
 
                 </RadioGroup>
@@ -433,7 +437,7 @@
                     android:text="@string/amount"
                     android:id="@+id/amount_input"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_title_material" />
             </TableRow>
 
@@ -448,7 +452,7 @@
                     android:text="@string/bathrooms"
                     android:id="@+id/textView2"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp" />
@@ -474,7 +478,7 @@
                     android:text="@string/halls"
                     android:id="@+id/textView3"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material"
                     android:layout_marginLeft="20dp"/>
                 <EditText
@@ -498,7 +502,7 @@
                     android:text="@string/bedrooms"
                     android:id="@+id/textView4"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material"
                     android:layout_marginLeft="20dp" />
 
@@ -523,7 +527,7 @@
                     android:text="@string/kitchens"
                     android:id="@+id/textView5"
                     android:layout_column="0"
-                    android:layout_weight="0.1"
+                    android:layout_weight="0.5"
                     android:textSize="@dimen/abc_text_size_small_material"
                     android:layout_marginLeft="20dp" />
 

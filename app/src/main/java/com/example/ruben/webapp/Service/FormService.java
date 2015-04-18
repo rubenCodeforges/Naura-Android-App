@@ -49,7 +49,6 @@ public class FormService {
             }
         });
 
-
     }
 
     /**
@@ -64,4 +63,5 @@ public class FormService {
 
         spinner.setAdapter(adapter);
     }
+
 }

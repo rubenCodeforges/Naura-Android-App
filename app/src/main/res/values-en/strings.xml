@@ -36,5 +36,21 @@
     <string name="sea_view">Sea view</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="object_structure">Object Structure</string>
+    <string name="object_material_type">Object Material</string>
+    <string name="ok_btn">Other Contacts</string>
+    <string name="others">Others</string>
+    <string name="parking">Parking</string>
+    <string name="phone_availability">Phone</string>
+    <string name="pool">Pool</string>
+    <string name="pool_construction_site">Pool construction site</string>
+    <string name="roof">Roof type</string>
+    <string name="supply_object">Supply object</string>
+    <string name="television">TV</string>
+    <string name="terrace">Terrace</string>
+    <string name="terrace_fence">Terrace Fence</string>
+    <string name="video_recording">Video Recording</string>
+    <string name="waste_water"></string>
+    <string name="waste_water_disposal"></string>
 
 </resources>

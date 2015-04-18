@@ -3,46 +3,1302 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TableLayout
+    <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView" >
 
-        <TableRow
+        <TableLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/id">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <TableRow
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/object_material_type"
-                android:id="@+id/textView7"
-                android:layout_column="0"
-                android:layout_weight="0.1" />
+                android:layout_marginBottom="10dp">
 
-            <Spinner
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/object_material_type"
+                    android:id="@+id/textView7"
+                    android:layout_column="0"
+                    android:layout_weight="0.5" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/object_material_type"
+                    android:layout_column="1"
+                    android:onClick="openDialog"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/fasad_type"
+                    android:id="@+id/textView6"
+                    android:layout_column="0"
+                    android:layout_weight="0.5" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fasad_type"
+                    android:onClick="openDialog"
+                    android:layout_column="1"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/id2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/roof"
+                    android:id="@+id/textView8"
+                    android:layout_column="0"
+                    android:layout_weight="0.5" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/roof_type"
+                    android:onClick="openDialog"
+                    android:layout_column="1"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/windows"
+                    android:id="@+id/textView9"
+                    android:layout_column="0"
+                    android:layout_weight="0.5" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/windows"
+                    android:onClick="openDialog"
+                    android:layout_column="1"
+                    android:layout_weight="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/object_info"
+                    android:id="@+id/textView10"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/object_info"
+                    android:layout_weight="0.5">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/object_info_kadastr"
+                        android:id="@+id/object_info_cadastr"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/object_info_not_full"
+                        android:id="@+id/radioButton"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/object_info_not_registered"
+                        android:id="@+id/radioButton2"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/license"
+                    android:id="@+id/textView11"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/license"
+                    android:layout_weight="0.5">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_all_legal"
+                        android:id="@+id/info_legal_all"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_half_legal"
+                        android:id="@+id/info_legal_half"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/info_not_legal"
+                        android:id="@+id/info_not_legal"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/wetness"
+                    android:id="@+id/textView12"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.5">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/wetness_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/wetness_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/television"
+                    android:id="@+id/textView13"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup2"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_satelite"
+                        android:id="@+id/tv_satelite"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tv_kabel"
+                        android:id="@+id/tv_kabel"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/tv_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/floor"
+                    android:id="@+id/floor"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/floor"
+                    android:layout_column="1"
+                    android:onClick="openDialog"
+                    android:layout_weight="1" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/terrace"
+                    android:id="@+id/textView13"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup2"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/terrace_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/terrace_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/terrace_area"
+                        android:layout_column="1"
+                        android:layout_weight="0.1" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/terrace_area"
+                        android:id="@+id/textView14"
+                        android:layout_column="0"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/electricity"
+                    android:id="@+id/textView15"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:layout_marginTop="5dp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup3"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.5" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/electricity_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/electricity_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/water"
+                    android:id="@+id/textView16"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:layout_marginTop="5dp" />
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup3"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.5" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/water_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/water_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/waste_water"
+                    android:id="@+id/textView16"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:layout_marginTop="5dp" />
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup3"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.5" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/waste_water_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/waste_water_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/heat_type"
+                    android:id="@+id/textView17"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heat_type"
+                    android:layout_column="1"
+                    android:onClick="openDialog"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/garage"
+                    android:id="@+id/textView13"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup2"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/garage_yes"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/garage_no"
+                        android:checked="false"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/garage_area"
+                        android:layout_column="1"
+                        android:layout_weight="0.1" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/garage_area"
+                        android:id="@+id/textView14"
+                        android:layout_column="0"
+                        android:layout_weight="0.1"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/basement"
+                    android:id="@+id/textView13"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup2"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/basement_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/basement_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/basement_area"
+                        android:layout_column="1"
+                        android:layout_weight="0.5" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/basement_area"
+                        android:id="@+id/textView14"
+                        android:layout_column="0"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/supply_object"
+                    android:id="@+id/textView18"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup4"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/supply_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/supply_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/supply_area"
+                        android:layout_column="1"
+                        android:layout_weight="0.5" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/supply_area"
+                        android:id="@+id/textView19"
+                        android:layout_column="0"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/water_supply"
+                    android:id="@+id/textView20"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup5"
+                    android:orientation="vertical"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_supply_city"
+                        android:id="@+id/water_supply_city"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_supply_well"
+                        android:id="@+id/water_supply_well"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_supply_source"
+                        android:id="@+id/water_supply_source"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/water_supply_brought"
+                        android:id="@+id/water_supply_brought"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/waste_water_disposal"
+                    android:id="@+id/textView21"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup6"
+                    android:orientation="vertical"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waster_water_disposal_city"
+                        android:id="@+id/waster_water_disposal_city"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/waster_water_disposal_septic"
+                        android:id="@+id/waster_water_disposal_septic"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/water_container"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/water_container_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/water_container_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/parking"
+                    android:id="@+id/textView23"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup8"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5" >
+
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/parking_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/parking_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/parking_place_amount"
+                        android:layout_column="1"
+                        android:layout_weight="0.5" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/parking_place_amount"
+                        android:id="@+id/textView24"
+                        android:layout_column="0"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/lift"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/lift_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/lift_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/phone_availability"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/phone_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/phone_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/interphone"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/interphone_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/interphone_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/video_recording"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/video_recording_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/video_recording_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pool_construction_site"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/pool_construction_site_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/pool_construction_site_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/pool"
+                    android:id="@+id/textView23"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup8"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5" >
+
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/pool_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/pool_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/pool_size"
+                        android:layout_column="1"
+                        android:layout_weight="0.5" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/pool_siz"
+                        android:id="@+id/textView24"
+                        android:layout_column="0"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/furniture_available"
+                    android:id="@+id/textView22"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="12sp" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup7"
+                    android:orientation="horizontal"
+                    android:layout_weight="1" >
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/furniture_available_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/furniture_available_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/object_material_type"
-                android:layout_column="1"
-                android:layout_weight="1" />
-        </TableRow>
+                android:layout_marginBottom="10dp">
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/terrace_fence"
+                    android:id="@+id/textView7"
+                    android:layout_column="0"
+                    android:layout_weight="0.5" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="@string/fasad_type"
-                android:id="@+id/textView6"
-                android:layout_column="0"
-                android:layout_weight="0.1" />
-        </TableRow>
-    </TableLayout>
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/terrace_fence"
+                    android:layout_column="1"
+                    android:onClick="openDialog"
+                    android:layout_weight="1" />
+            </TableRow>
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/garden_fence"
+                    android:id="@+id/textView23"
+                    android:layout_column="0"
+                    android:layout_weight="0.1" />
+
+                <RadioGroup
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:id="@+id/radioGroup8"
+                    android:orientation="vertical"
+                    android:layout_weight="0.5" >
+
+
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yes"
+                        android:id="@+id/garde_fence_yes"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no"
+                        android:id="@+id/garde_fence_no"
+                        android:checked="false"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                    <EditText
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="number"
+                        android:ems="10"
+                        android:id="@+id/garden_fence_type"
+                        android:layout_column="1"
+                        android:layout_weight="0.5" />
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="@string/fence_type"
+                        android:id="@+id/textView24"
+                        android:layout_column="0"
+                        android:layout_weight="0.5"
+                        android:textSize="10sp" />
+                </RadioGroup>
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+
 </RelativeLayout>
