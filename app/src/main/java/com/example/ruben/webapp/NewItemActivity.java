@@ -22,6 +22,7 @@ public class NewItemActivity extends ActionBarActivity {
     FormService formService;
     Spinner communitySpinner,koSpinner;
     AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
+    View.OnFocusChangeListener openDialogOnFocus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,14 @@ public class NewItemActivity extends ActionBarActivity {
         Iconify.addIcons((Button) findViewById(R.id.btnSaveItem));
         this.communitySpinner = (Spinner) findViewById(R.id.community_input);
         this.koSpinner = (Spinner) findViewById(R.id.ko_input_spinner);
-
+        this.openDialogOnFocus = new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean focus) {
+                if(focus){
+                    openDialog(view);
+                }
+            }
+        };
         this.formService = new FormService(this);
         this.formService.datePickerAction((EditText) findViewById(R.id.building_date),this);
         this.formService.populateSpinner(
@@ -131,23 +139,36 @@ public class NewItemActivity extends ActionBarActivity {
         this.buildingMaterialDialog = new DialogBuilder().getDialog(
                 this, R.string.object_material_type, R.array.object_material, R.id.object_material_type
         );
+        findViewById(R.id.object_material_type).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.fasadDialog = new DialogBuilder().getDialog(
                 this, R.string.fasad_type, R.array.fasad_type, R.id.fasad_type
         );
+        findViewById(R.id.fasad_type).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.roofDialog = new DialogBuilder().getDialog(
                 this, R.string.roof, R.array.roof_type, R.id.roof_type
         );
+        findViewById(R.id.roof_type).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.windowDialog = new DialogBuilder().getDialog(
                 this, R.string.windows, R.array.window_type, R.id.windows
         );
+        findViewById(R.id.windows).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.floorDialog = new DialogBuilder().getDialog(
                 this, R.string.floor, R.array.floor_type, R.id.floor
         );
+        findViewById(R.id.floor).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.heatTypeDialog = new DialogBuilder().getDialog(
                 this, R.string.heat_type, R.array.heat_type, R.id.heat_type
         );
+        findViewById(R.id.heat_type).setOnFocusChangeListener( this.openDialogOnFocus );
+
         this.terraceDialog = new DialogBuilder().getDialog(
-                this, R.string.terrace_fence, R.array.terrace, R.id.terrace_fence
+                this, R.string.terrace_fence, R.array.terrace_fence, R.id.terrace_fence
         );
+        findViewById(R.id.terrace_fence).setOnFocusChangeListener( this.openDialogOnFocus );
     }
 }

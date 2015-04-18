@@ -4,6 +4,7 @@ package com.example.ruben.webapp.Service;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.res.Resources;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
@@ -16,6 +17,7 @@ import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
+import java.util.concurrent.Callable;
 
 public class FormService {
 
@@ -48,6 +50,16 @@ public class FormService {
                         calendar.get(Calendar.DAY_OF_MONTH)).show();
             }
         });
+        editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean focus) {
+                if(focus){
+                    new DatePickerDialog(context, date, calendar
+                            .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
+                            calendar.get(Calendar.DAY_OF_MONTH)).show();
+                }
+            }
+        });
 
     }
 
@@ -63,5 +75,4 @@ public class FormService {
 
         spinner.setAdapter(adapter);
     }
-
 }

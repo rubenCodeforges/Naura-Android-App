@@ -954,6 +954,11 @@
         <item>нет</item>
     </string-array>
 
+    <string-array name="terrace_fence">
+        <item>кованая</item>
+        <item>металическая</item>
+        <item>бетонная</item>
+    </string-array>
     <string-array name="electricity">
         <item>да</item>
         <item>нет</item>
