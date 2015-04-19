@@ -1,9 +1,9 @@
 package com.example.ruben.webapp;
 
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,7 +12,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
+import android.widget.TableLayout;
 
+import com.example.ruben.webapp.Controllers.DataController;
 import com.example.ruben.webapp.Service.DialogBuilder;
 import com.example.ruben.webapp.Service.FormService;
 import com.joanzapata.android.iconify.Iconify;
@@ -23,7 +25,7 @@ public class NewItemActivity extends ActionBarActivity {
     Spinner communitySpinner,koSpinner;
     AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
     View.OnFocusChangeListener openDialogOnFocus;
-
+    DataController dataController;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +33,8 @@ public class NewItemActivity extends ActionBarActivity {
         Iconify.addIcons((Button) findViewById(R.id.btnSaveItem));
         this.communitySpinner = (Spinner) findViewById(R.id.community_input);
         this.koSpinner = (Spinner) findViewById(R.id.ko_input_spinner);
+        this.dataController = new DataController(this);
+
         this.openDialogOnFocus = new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean focus) {
@@ -133,6 +137,12 @@ public class NewItemActivity extends ActionBarActivity {
         tabs.addTab(spec);
 
         tabs.setCurrentTab(0);
+    }
+
+    public void onNewItem (View v) {
+        dataController.addItemAction((TableLayout) findViewById(R.id.tab1_child));
+        String jsonResponse = dataController.getNewItemsJson();
+        Log.v("naura",jsonResponse);
     }
 
     public void initDialogs () {
