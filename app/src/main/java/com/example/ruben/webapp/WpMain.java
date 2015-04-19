@@ -22,8 +22,8 @@ public class WpMain extends ActionBarActivity {
         setContentView(R.layout.activity_wp_main);
         Iconify.addIcons((Button) findViewById(R.id.btnAddItem));
         Log.v("naura","app started");
-//        listController = new BuildingListController(this);
-//        listController.loadListAction();
+        listController = new DataController(this);
+        listController.loadListAction();
     }
 
 

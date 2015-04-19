@@ -4,7 +4,7 @@ package com.example.ruben.webapp.Models;
  * Created by Codeforges on 18.04.15.
  */
 public class NauraData {
-    private long id;
+    private long _id;
     private String itemTitle;
     private String ownerName;
     private String ownerPhone;
@@ -12,6 +12,14 @@ public class NauraData {
     private String objectForm;
     private String objectStructureForm;
     private String photoUrls;
+
+    public long get_id() {
+        return _id;
+    }
+
+    public void set_id(long _id) {
+        this._id = _id;
+    }
 
     public String getItemTitle() {
         return itemTitle;

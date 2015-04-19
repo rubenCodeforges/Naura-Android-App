@@ -2,16 +2,10 @@ package com.example.ruben.webapp.Controllers;
 
 import android.app.Activity;
 import android.database.Cursor;
-import android.text.Layout;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.RadioButton;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
 import com.example.ruben.webapp.Database.NauraCursor;
@@ -19,7 +13,7 @@ import com.example.ruben.webapp.Database.NauraDbHelper;
 import com.example.ruben.webapp.Models.NauraData;
 import com.example.ruben.webapp.R;
 
-import java.util.ArrayList;
+import java.text.DateFormat;
 
 /**
  * Created by Codeforges
@@ -42,30 +36,48 @@ public class DataController {
         itemsList.setAdapter(cursor);
     }
 
-    public void addItemAction (ViewGroup layout) {
+    public void persistFormAction(ViewGroup layout) {
 
         for (int i = 0; i < layout.getChildCount(); i++) {
             View child = layout.getChildAt(i);
 
             if (child instanceof ViewGroup){
-                addItemAction((ViewGroup)child);
+                persistFormAction((ViewGroup) child);
             } else {
 
                 if (child instanceof EditText) {
-                    newItems += "\"data\":{";
+                    // newItems += "\"data\":{";
                     String value = ((EditText) child).getText().toString();
-                    String key = child.getResources().getResourceEntryName(child.getId());
-                    String keyValue = "\""+key+ "\":\"" + value + "\"";
-                    newItems += keyValue +"}},";
+                    //String key = child.getResources().getResourceEntryName(child.getId());
+                    //String keyValue = "\""+key+ "\":\"" + value + "\"";
+                    newItems += "\"" +value +"\",";
                 } else if (child instanceof TextView) {
-                    newItems += "{\"title\" : \""+((TextView) child).getText().toString()+"\",";
+                    //newItems += "{\"title\" : \""+((TextView) child).getText().toString()+"\",";
+                    newItems += "\""+((TextView) child).getText().toString()+"\":";
                 }
             }
         }
     }
 
     public String getNewItemsJson () {
-        return "[" + newItems.substring(0,newItems.length()-1) + "]";
+        return "{" + newItems.substring(0,newItems.length()-1) + "}";
     }
 
+    public void storeDataAction () throws Exception {
+        if (!newItems.isEmpty()) {
+            NauraData data = new NauraData();
+
+            data.setItemTitle( "Object owner: "
+                    + ((EditText)mainActivity.findViewById(R.id.ownerName)).getText().toString()
+            );
+
+            data.setOwnerName(((EditText)mainActivity.findViewById(R.id.ownerName)).getText().toString());
+            data.setOwnerPhone(((EditText)mainActivity.findViewById(R.id.ownerPhone)).getText().toString());
+            data.setOtherContacts(((EditText)mainActivity.findViewById(R.id.ownerOther)).getText().toString());
+
+            databaseManager.addProduct(data);
+        }else {
+            throw new Exception("item data should be persisted first");
+        }
+    }
 }

@@ -28,7 +28,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText"
+                android:id="@+id/ownerName"
                 android:layout_column="3"
                 android:layout_weight="1" />
 
@@ -51,7 +51,8 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText2"
+                android:id="@+id/ownerPhone"
+                android:inputType="phone"
                 android:layout_column="3"
                 android:layout_weight="1" />
         </TableRow>
@@ -73,7 +74,7 @@
             <EditText
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText3"
+                android:id="@+id/ownerOther"
                 android:layout_column="3"
                 android:layout_weight="1" />
         </TableRow>

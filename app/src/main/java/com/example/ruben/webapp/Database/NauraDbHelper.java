@@ -15,7 +15,7 @@ import com.example.ruben.webapp.Models.NauraData;
 
 public class NauraDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "naura.db";
     public static final String TABLE_DATA = "naura_data";
     private static final String COLUMN_NAMES =
@@ -30,15 +30,14 @@ public class NauraDbHelper extends SQLiteOpenHelper {
 
     // Database creation sql statement
     private static final String DATABASE_CREATE = "CREATE TABLE "+TABLE_DATA+" ("
-            + "	id INTEGER DEFAULT 0,"
+            + "	_id integer primary key autoincrement,"
             + "item_title TEXT ,"
             + "owner_name TEXT ,"
             + "owner_phone TEXT ,"
             + "other_contacts TEXT ,"
             + "object_form TEXT ,"
             + "object_structure_form TEXT ,"
-            + "photo_urls TEXT ,"
-            + " PRIMARY KEY (id)"
+            + "photo_urls TEXT"
             + ")";
 
     public NauraDbHelper ( Context context ) {
@@ -64,7 +63,7 @@ public class NauraDbHelper extends SQLiteOpenHelper {
         values.put("item_title", data.getItemTitle());
         values.put("owner_name", data.getOwnerName());
         values.put("owner_phone", data.getOwnerPhone());
-        values.put("owner_others", data.getOtherContacts());
+        values.put("other_contacts", data.getOtherContacts());
         values.put("object_form", data.getOtherContacts());
         values.put("object_structure_form", data.getOtherContacts());
         values.put("photo_urls", data.getOtherContacts());
@@ -79,6 +78,7 @@ public class NauraDbHelper extends SQLiteOpenHelper {
     public Cursor getAllData() {
         String selectQuery = "SELECT  * FROM " + TABLE_DATA;
         Cursor cursor = this.getWritableDatabase().rawQuery(selectQuery,null);
+        Log.v("naura",cursor.toString());
         return cursor;
     }
 }

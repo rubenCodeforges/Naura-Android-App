@@ -28,7 +28,7 @@ public class NauraCursor extends CursorAdapter {
 
         TextView nauraItem = (TextView) view.findViewById(R.id.itemTitle);
 
-        String title = cursor.getString(cursor.getColumnIndexOrThrow("itemTitle"));
+        String title = cursor.getString(cursor.getColumnIndexOrThrow("item_title"));
 
         nauraItem.setText(title);
     }

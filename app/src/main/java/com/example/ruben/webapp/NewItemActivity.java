@@ -7,12 +7,12 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
-import android.widget.TableLayout;
 
 import com.example.ruben.webapp.Controllers.DataController;
 import com.example.ruben.webapp.Service.DialogBuilder;
@@ -140,8 +140,13 @@ public class NewItemActivity extends ActionBarActivity {
     }
 
     public void onNewItem (View v) {
-        dataController.addItemAction((TableLayout) findViewById(R.id.tab1_child));
+        dataController.persistFormAction((ViewGroup) findViewById(R.id.tab1));
         String jsonResponse = dataController.getNewItemsJson();
+        try {
+            dataController.storeDataAction();
+        }catch (Exception e){
+            Log.w("naura",e.getMessage());
+        }
         Log.v("naura",jsonResponse);
     }
 
