@@ -4,7 +4,7 @@ package com.codeforges.app.naura.models;
  * Created by Codeforges on 18.04.15.
  */
 public class NauraData {
-    private long _id;
+    private long id;
     private String itemTitle;
     private String ownerName;
     private String ownerPhone;
@@ -13,12 +13,12 @@ public class NauraData {
     private String objectStructureForm;
     private String photoUrls;
 
-    public long get_id() {
-        return _id;
+    public long getId() {
+        return id;
     }
 
-    public void set_id(long _id) {
-        this._id = _id;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public String getItemTitle() {
@@ -82,4 +82,35 @@ public class NauraData {
         return itemTitle;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof NauraData)) return false;
+
+        NauraData nauraData = (NauraData) o;
+
+        if (id != nauraData.id) return false;
+        if (!itemTitle.equals(nauraData.itemTitle)) return false;
+        if (!objectForm.equals(nauraData.objectForm)) return false;
+        if (!objectStructureForm.equals(nauraData.objectStructureForm)) return false;
+        if (!otherContacts.equals(nauraData.otherContacts)) return false;
+        if (!ownerName.equals(nauraData.ownerName)) return false;
+        if (!ownerPhone.equals(nauraData.ownerPhone)) return false;
+        if (!photoUrls.equals(nauraData.photoUrls)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = (int) (id ^ (id >>> 32));
+        result = 31 * result + itemTitle.hashCode();
+        result = 31 * result + ownerName.hashCode();
+        result = 31 * result + ownerPhone.hashCode();
+        result = 31 * result + otherContacts.hashCode();
+        result = 31 * result + objectForm.hashCode();
+        result = 31 * result + objectStructureForm.hashCode();
+        result = 31 * result + photoUrls.hashCode();
+        return result;
+    }
 }
