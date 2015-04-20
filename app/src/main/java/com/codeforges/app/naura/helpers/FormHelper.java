@@ -1,29 +1,23 @@
-package com.example.ruben.webapp.Service;
+package com.codeforges.app.naura.helpers;
 
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.content.res.Resources;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 
-import com.example.ruben.webapp.R;
-
-import java.lang.reflect.Array;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-import java.util.concurrent.Callable;
 
-public class FormService {
+public class FormHelper {
 
     public Activity activity;
 
-    public FormService(Activity context){
+    public FormHelper(Activity context){
         this.activity = context;
     }
 

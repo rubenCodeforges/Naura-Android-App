@@ -1,4 +1,4 @@
-package com.example.ruben.webapp.Database;
+package com.codeforges.app.naura.database;
 
 import android.content.Context;
 import android.database.Cursor;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
-import com.example.ruben.webapp.R;
+import com.codeforges.app.naura.R;
 
 /**
  * Created by Codeforges on 19.04.15.

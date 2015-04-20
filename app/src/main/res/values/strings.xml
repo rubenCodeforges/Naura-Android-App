@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">WebApp</string>
+    <string name="app_name">Naura App</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="title_activity_create_object">CreateObject</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_create_object">Новый Объект</string>
+
     <!--Tab strings-->
     <string name="owner_info">Владелец</string>
     <string name="object_info">Объект</string>

@@ -1,4 +1,4 @@
-package com.example.ruben.webapp;
+package com.codeforges.app.naura;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

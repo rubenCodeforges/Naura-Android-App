@@ -1,4 +1,4 @@
-package com.example.ruben.webapp.Controllers;
+package com.codeforges.app.naura.controllers;
 
 import android.app.Activity;
 import android.database.Cursor;
@@ -8,12 +8,10 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ruben.webapp.Database.NauraCursor;
-import com.example.ruben.webapp.Database.NauraDbHelper;
-import com.example.ruben.webapp.Models.NauraData;
-import com.example.ruben.webapp.R;
-
-import java.text.DateFormat;
+import com.codeforges.app.naura.database.NauraCursor;
+import com.codeforges.app.naura.database.NauraDbHelper;
+import com.codeforges.app.naura.models.NauraData;
+import com.codeforges.app.naura.R;
 
 /**
  * Created by Codeforges

@@ -1,4 +1,4 @@
-package com.example.ruben.webapp.Database;
+package com.codeforges.app.naura.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-import com.example.ruben.webapp.Models.NauraData;
+import com.codeforges.app.naura.models.NauraData;
 
 /**
  * Created by Codeforges on 18.04.15.

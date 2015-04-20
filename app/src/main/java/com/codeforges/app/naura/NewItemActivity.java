@@ -1,4 +1,4 @@
-package com.example.ruben.webapp;
+package com.codeforges.app.naura;
 
 import android.app.AlertDialog;
 import android.support.v7.app.ActionBarActivity;
@@ -14,14 +14,14 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
 
-import com.example.ruben.webapp.Controllers.DataController;
-import com.example.ruben.webapp.Service.DialogBuilder;
-import com.example.ruben.webapp.Service.FormService;
+import com.codeforges.app.naura.controllers.DataController;
+import com.codeforges.app.naura.helpers.DialogBuilder;
+import com.codeforges.app.naura.helpers.FormHelper;
 import com.joanzapata.android.iconify.Iconify;
 
 
 public class NewItemActivity extends ActionBarActivity {
-    FormService formService;
+    FormHelper formHelper;
     Spinner communitySpinner,koSpinner;
     AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
     View.OnFocusChangeListener openDialogOnFocus;
@@ -43,9 +43,9 @@ public class NewItemActivity extends ActionBarActivity {
                 }
             }
         };
-        this.formService = new FormService(this);
-        this.formService.datePickerAction((EditText) findViewById(R.id.building_date),this);
-        this.formService.populateSpinner(
+        this.formHelper = new FormHelper(this);
+        this.formHelper.datePickerAction((EditText) findViewById(R.id.building_date),this);
+        this.formHelper.populateSpinner(
                 this.communitySpinner, R.array.community_list
         );
         this.communitySpinner.setOnItemSelectedListener(
@@ -54,7 +54,7 @@ public class NewItemActivity extends ActionBarActivity {
                     public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
                         String community = "KO_" + parent.getItemAtPosition(pos).toString().replace(" ", "_");
                         int community_id = getResources().getIdentifier(community, "array", getPackageName());
-                        formService.populateSpinner(koSpinner, community_id);
+                        formHelper.populateSpinner(koSpinner, community_id);
                     }
 
                     @Override

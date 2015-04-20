@@ -1,11 +1,11 @@
-package com.example.ruben.webapp.Service;
+package com.codeforges.app.naura.helpers;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.EditText;
 
-import com.example.ruben.webapp.R;
+import com.codeforges.app.naura.R;
 
 import java.util.ArrayList;
 

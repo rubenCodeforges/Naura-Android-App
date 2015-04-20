@@ -1,4 +1,4 @@
-package com.example.ruben.webapp.Models;
+package com.codeforges.app.naura.models;
 
 /**
  * Created by Codeforges on 18.04.15.

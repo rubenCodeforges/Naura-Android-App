@@ -1,4 +1,4 @@
-package com.example.ruben.webapp;
+package com.codeforges.app.naura;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -8,11 +8,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.ruben.webapp.Controllers.DataController;
+import com.codeforges.app.naura.controllers.DataController;
 import com.joanzapata.android.iconify.Iconify;
 
 
-public class WpMain extends ActionBarActivity {
+public class NauraMain extends ActionBarActivity {
 
     private DataController listController;
 

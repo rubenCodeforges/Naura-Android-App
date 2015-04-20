@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ruben.webapp" >
+    package="com.codeforges.app.naura" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".WpMain"
+            android:name="com.codeforges.app.naura.NauraMain"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,12 +20,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".NewItemActivity"
+            android:name="com.codeforges.app.naura.NewItemActivity"
             android:label="@string/title_activity_create_object"
-            android:parentActivityName=".WpMain">
+            android:parentActivityName="com.codeforges.app.naura.NauraMain">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".WpMain" />
+                android:value="com.codeforges.app.naura.NauraMain" />
         </activity>
     </application>
 
