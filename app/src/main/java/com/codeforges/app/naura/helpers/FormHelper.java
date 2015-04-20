@@ -17,7 +17,7 @@ public class FormHelper {
 
     private  Activity activity;
 
-    private  FormHelper(Activity context){
+    public  FormHelper(Activity context){
         this.activity = context;
     }
 
