@@ -15,9 +15,9 @@ import java.util.Locale;
 
 public class FormHelper {
 
-    public Activity activity;
+    private  Activity activity;
 
-    public FormHelper(Activity context){
+    private  FormHelper(Activity context){
         this.activity = context;
     }
 

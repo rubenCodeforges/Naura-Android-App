@@ -12,8 +12,8 @@ import java.util.ArrayList;
 
 public class DialogBuilder {
 
-    String[] availableItems = {};
-    ArrayList<Integer> selectedItems = new ArrayList<>();
+    private String[] availableItems = {};
+    private ArrayList<Integer> selectedItems = new ArrayList<>();
 
     /**
      *  Returns the dialog builder

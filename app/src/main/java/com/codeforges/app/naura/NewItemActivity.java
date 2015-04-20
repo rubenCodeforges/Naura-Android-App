@@ -21,11 +21,13 @@ import com.joanzapata.android.iconify.Iconify;
 
 
 public class NewItemActivity extends ActionBarActivity {
-    FormHelper formHelper;
-    Spinner communitySpinner,koSpinner;
-    AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
-    View.OnFocusChangeListener openDialogOnFocus;
-    DataController dataController;
+
+    private FormHelper formHelper;
+    private Spinner communitySpinner,koSpinner;
+    private AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
+    private View.OnFocusChangeListener openDialogOnFocus;
+    private DataController dataController;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

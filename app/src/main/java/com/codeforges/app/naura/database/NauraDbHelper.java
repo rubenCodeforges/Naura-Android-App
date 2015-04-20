@@ -17,7 +17,7 @@ public class NauraDbHelper extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION = 3;
     private static final String DATABASE_NAME = "naura.db";
-    public static final String TABLE_DATA = "naura_data";
+    private static final String TABLE_DATA = "naura_data";
     private static final String COLUMN_NAMES =
               "_id,"
             + "item_title,"
