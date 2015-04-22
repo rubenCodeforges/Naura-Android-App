@@ -3,11 +3,17 @@ package com.codeforges.app.naura.helpers;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.Spinner;
+import android.widget.TableRow;
+
+import com.codeforges.app.naura.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -15,8 +21,8 @@ import java.util.Locale;
 
 public class FormHelper {
 
-    private  Activity activity;
-
+    private Activity activity;
+    private String formData = "";
     public  FormHelper(Activity context){
         this.activity = context;
     }
@@ -69,4 +75,56 @@ public class FormHelper {
 
         spinner.setAdapter(adapter);
     }
+
+    public String getFormData() {
+        return "{" + formData + "}";
+    }
+
+    public void submitFormData (ViewGroup layout) {
+            storeFormData(layout);
+            formData += getSpinnerData();
+    }
+
+    private void storeFormData(ViewGroup layout) {
+        for (int i = 0; i < layout.getChildCount(); i++) {
+            View child = layout.getChildAt(i);
+            String key;
+            String value;
+
+            if (child instanceof ViewGroup){
+                storeFormData((ViewGroup) child);
+            } else {
+
+                if (child instanceof EditText) {
+                    String stringName = activity.getResources().getResourceEntryName(child.getId());
+                    int stringId = activity.getResources().getIdentifier(stringName,"string",activity.getPackageName());
+
+                    key = activity.getResources().getString(stringId);
+                    value = ((EditText) child).getText().toString();
+
+                    formData += "\"" + key + "\":"+ "\"" + value + "\",";
+                }
+
+                if (child instanceof RadioButton && ((RadioButton)child).isChecked()) {
+                    View parent = (View) child.getParent();
+                    String stringName = activity.getResources().getResourceEntryName(parent.getId());
+                    int stringId = activity.getResources().getIdentifier(stringName,"string",activity.getPackageName());
+
+                    key = activity.getResources().getString(stringId);
+                    value = ((RadioButton) child).getText().toString();
+
+                    formData += "\"" + key + "\":"+ "\"" + value + "\",";
+                    Log.v("form-data", formData);
+                }
+
+            }
+        }
+    }
+    private String getSpinnerData() {
+        String communityVal = ((Spinner) activity.findViewById(R.id.community)).getSelectedItem().toString();
+        String koVal = ((Spinner) activity.findViewById(R.id.ko)).getSelectedItem().toString();
+
+        return "\"community\" : " + " \"" + communityVal + "\" ," + " \"koValue\" : " + " \"" + koVal + "\"";
+    }
+
 }

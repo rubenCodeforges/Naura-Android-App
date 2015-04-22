@@ -10,6 +10,7 @@
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
@@ -27,7 +28,8 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/community_input"
+                    android:id="@+id/community"
+                    android:tag="input_spinner"
                     android:layout_column="1"
                     android:layout_weight="1" />
 
@@ -71,6 +73,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:inputType="date"
                     android:id="@+id/building_date"
                     android:layout_column="1"
                     android:layout_weight="1" />
@@ -94,7 +97,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/distance_to_sea"
+                    android:id="@+id/sea_distance"
                     android:layout_column="1"
                     android:layout_weight="1" />
             </TableRow>
@@ -257,7 +260,8 @@
                 <Spinner
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/ko_input_spinner"
+                    android:id="@+id/ko"
+                    android:tag="input_spinner"
                     android:layout_column="1"
                     android:layout_weight="1" />
 
@@ -462,7 +466,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/bathrooms_count"
+                    android:id="@+id/bathrooms"
                     android:layout_column="1"
                     android:layout_weight="1" />
             </TableRow>
@@ -486,7 +490,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="number"
                     android:ems="10"
-                    android:id="@+id/halls_count"
+                    android:id="@+id/halls"
                     android:layout_column="1"
                     android:layout_weight="1" />
             </TableRow>

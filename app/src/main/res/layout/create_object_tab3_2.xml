@@ -25,7 +25,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup2"
+                android:id="@+id/basement"
                 android:orientation="vertical"
                 android:layout_weight="0.5">
 
@@ -86,7 +86,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup4"
+                android:id="@+id/supply_object"
                 android:orientation="vertical"
                 android:layout_weight="0.5" >
 
@@ -147,7 +147,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup5"
+                android:id="@+id/water_supply"
                 android:orientation="vertical"
                 android:layout_weight="1" >
 
@@ -206,7 +206,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup6"
+                android:id="@+id/waste_water_disposal"
                 android:orientation="vertical"
                 android:layout_weight="1" >
 
@@ -248,7 +248,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup7"
+                android:id="@+id/water_container"
                 android:orientation="horizontal"
                 android:layout_weight="1" >
 
@@ -289,7 +289,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup8"
+                android:id="@+id/parking"
                 android:orientation="vertical"
                 android:layout_weight="0.5" >
 
@@ -348,7 +348,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup7"
+                android:id="@+id/lift"
                 android:orientation="horizontal"
                 android:layout_weight="1" >
 
@@ -388,7 +388,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup7"
+                android:id="@+id/phone_availability"
                 android:orientation="horizontal"
                 android:layout_weight="1" >
 
@@ -428,7 +428,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_column="1"
-                android:id="@+id/radioGroup7"
+                android:id="@+id/interphone"
                 android:orientation="horizontal"
                 android:layout_weight="1" >
 

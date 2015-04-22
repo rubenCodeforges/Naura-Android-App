@@ -13,10 +13,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import com.codeforges.app.naura.controllers.DataController;
 import com.codeforges.app.naura.helpers.DialogBuilder;
+import com.codeforges.app.naura.helpers.EntityManager;
 import com.codeforges.app.naura.helpers.FormHelper;
+import com.codeforges.app.naura.helpers.TransportHelper;
+import com.codeforges.app.naura.models.NauraData;
 import com.joanzapata.android.iconify.Iconify;
 
 
@@ -27,16 +31,17 @@ public class NewItemActivity extends ActionBarActivity {
     private AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
     private View.OnFocusChangeListener openDialogOnFocus;
     private DataController dataController;
+    private EntityManager entityManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_object);
         Iconify.addIcons((Button) findViewById(R.id.btnSaveItem));
-        this.communitySpinner = (Spinner) findViewById(R.id.community_input);
-        this.koSpinner = (Spinner) findViewById(R.id.ko_input_spinner);
+        this.communitySpinner = (Spinner) findViewById(R.id.community);
+        this.koSpinner = (Spinner) findViewById(R.id.ko);
         this.dataController = new DataController(this);
-
+        this.entityManager = new EntityManager(this);
         this.openDialogOnFocus = new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean focus) {
@@ -100,7 +105,7 @@ public class NewItemActivity extends ActionBarActivity {
             case R.id.fasad_type :
                 fasadDialog.show();
                 break;
-            case R.id.roof_type :
+            case R.id.roof :
                 roofDialog.show();
                 break;
             case R.id.windows :
@@ -142,14 +147,13 @@ public class NewItemActivity extends ActionBarActivity {
     }
 
     public void onNewItem (View v) {
-        dataController.persistFormAction((ViewGroup) findViewById(R.id.tab1));
-        String jsonResponse = dataController.getNewItemsJson();
-        try {
-            dataController.storeDataAction();
-        }catch (Exception e){
-            Log.w("naura",e.getMessage());
-        }
-        Log.v("naura",jsonResponse);
+        formHelper.submitFormData((ViewGroup) findViewById(R.id.tabHost));
+        NauraData item = new NauraData();
+        item.setItemTitle( ((TextView)findViewById(R.id.owner_name)).getText().toString() );
+        item.setItemData(formHelper.getFormData());
+        entityManager.persist(item);
+        entityManager.flush();
+        this.finish();
     }
 
     public void initDialogs () {
@@ -164,9 +168,9 @@ public class NewItemActivity extends ActionBarActivity {
         findViewById(R.id.fasad_type).setOnFocusChangeListener( this.openDialogOnFocus );
 
         this.roofDialog = new DialogBuilder().getDialog(
-                this, R.string.roof, R.array.roof_type, R.id.roof_type
+                this, R.string.roof, R.array.roof_type, R.id.roof
         );
-        findViewById(R.id.roof_type).setOnFocusChangeListener( this.openDialogOnFocus );
+        findViewById(R.id.roof).setOnFocusChangeListener( this.openDialogOnFocus );
 
         this.windowDialog = new DialogBuilder().getDialog(
                 this, R.string.windows, R.array.window_type, R.id.windows

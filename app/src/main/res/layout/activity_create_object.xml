@@ -46,6 +46,7 @@
 
                 <LinearLayout
                     android:id="@+id/tab1"
+                    android:tag="owner_info"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical">
@@ -54,6 +55,7 @@
 
                 <LinearLayout
                     android:id="@+id/tab2"
+                    android:tag="object_info"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical">
@@ -62,6 +64,7 @@
 
                 <LinearLayout
                     android:id="@+id/tab3"
+                    android:tag="object_structure"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:orientation="vertical">

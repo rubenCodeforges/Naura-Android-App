@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.codeforges.app.naura.controllers.DataController;
+import com.codeforges.app.naura.helpers.TransportHelper;
 import com.joanzapata.android.iconify.Iconify;
 
 
@@ -21,12 +22,17 @@ public class NauraMain extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_wp_main);
         Iconify.addIcons((Button) findViewById(R.id.btnAddItem));
-        Log.v("naura","app started");
+        listController = new DataController(this);
+        listController.loadListAction();
+        Log.v("transport", Boolean.toString(TransportHelper.isConnected(this)));
+    }
+
+    @Override
+    protected void onResume () {
+        super.onResume();
         listController = new DataController(this);
         listController.loadListAction();
     }
-
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 

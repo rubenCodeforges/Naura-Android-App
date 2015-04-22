@@ -13,8 +13,7 @@
             android:layout_height="fill_parent"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/id">
+            android:layout_alignParentStart="true">
 
             <TableRow
                 android:layout_width="fill_parent"
@@ -78,7 +77,7 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/roof_type"
+                    android:id="@+id/roof"
                     android:onClick="openDialog"
                     android:layout_column="1"
                     android:layout_weight="1" />
@@ -225,7 +224,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup"
+                    android:id="@+id/wetness"
                     android:orientation="horizontal"
                     android:layout_weight="0.5">
 
@@ -268,7 +267,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup2"
+                    android:id="@+id/television"
                     android:orientation="vertical"
                     android:layout_weight="0.5">
 
@@ -342,7 +341,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup2"
+                    android:id="@+id/terrace"
                     android:orientation="vertical"
                     android:layout_weight="1">
 
@@ -403,7 +402,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup3"
+                    android:id="@+id/electricity"
                     android:orientation="horizontal"
                     android:layout_weight="0.5" >
 
@@ -444,7 +443,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup3"
+                    android:id="@+id/water"
                     android:orientation="horizontal"
                     android:layout_weight="0.5" >
 
@@ -484,7 +483,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup3"
+                    android:id="@+id/waste_water"
                     android:orientation="horizontal"
                     android:layout_weight="0.5" >
 
@@ -547,7 +546,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup2"
+                    android:id="@+id/garage"
                     android:orientation="vertical"
                     android:layout_weight="1">
 
@@ -606,7 +605,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup2"
+                    android:id="@+id/basement"
                     android:orientation="vertical"
                     android:layout_weight="0.5">
 
@@ -667,7 +666,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup4"
+                    android:id="@+id/supply_object"
                     android:orientation="vertical"
                     android:layout_weight="0.5" >
 
@@ -728,7 +727,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup5"
+                    android:id="@+id/water_supply"
                     android:orientation="vertical"
                     android:layout_weight="1" >
 
@@ -787,7 +786,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup6"
+                    android:id="@+id/waste_water_disposal"
                     android:orientation="vertical"
                     android:layout_weight="1" >
 
@@ -829,7 +828,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/water_container"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -870,7 +869,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup8"
+                    android:id="@+id/parking"
                     android:orientation="vertical"
                     android:layout_weight="0.5" >
 
@@ -929,7 +928,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/lift"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -969,7 +968,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/phone_availability"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -1009,7 +1008,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/interphone"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -1050,7 +1049,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/video_recording"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -1091,7 +1090,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/pool_construction_site"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -1131,7 +1130,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup8"
+                    android:id="@+id/pool"
                     android:orientation="vertical"
                     android:layout_weight="0.5" >
 
@@ -1166,7 +1165,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/pool_siz"
+                        android:text="@string/pool_size"
                         android:id="@+id/textView24"
                         android:layout_column="0"
                         android:layout_weight="0.5"
@@ -1191,7 +1190,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup7"
+                    android:id="@+id/furniture_available"
                     android:orientation="horizontal"
                     android:layout_weight="1" >
 
@@ -1255,7 +1254,7 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_column="1"
-                    android:id="@+id/radioGroup8"
+                    android:id="@+id/garden_fence"
                     android:orientation="vertical"
                     android:layout_weight="0.5" >
 
@@ -1290,7 +1289,7 @@
                         android:layout_width="fill_parent"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="@string/fence_type"
+                        android:text="@string/garden_fence_type"
                         android:id="@+id/textView24"
                         android:layout_column="0"
                         android:layout_weight="0.5"

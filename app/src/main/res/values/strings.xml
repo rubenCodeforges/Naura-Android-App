@@ -94,6 +94,6 @@
     <string name="waster_water_disposal_city">городская</string>
     <string name="waster_water_disposal_septic">септик</string>
     <string name="parking_place_amount">количество паркинг мест</string>
-    <string name="pool_siz">емкость бассейна m3</string>
-    <string name="fence_type">вид ограды</string>
+    <string name="pool_size">емкость бассейна m3</string>
+    <string name="garden_fence_type">вид ограды</string>
 </resources>
