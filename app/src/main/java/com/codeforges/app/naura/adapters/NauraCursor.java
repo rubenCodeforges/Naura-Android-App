@@ -1,4 +1,4 @@
-package com.codeforges.app.naura.database;
+package com.codeforges.app.naura.adapters;
 
 import android.content.Context;
 import android.database.Cursor;

@@ -96,4 +96,7 @@
     <string name="parking_place_amount">количество паркинг мест</string>
     <string name="pool_size">емкость бассейна m3</string>
     <string name="garden_fence_type">вид ограды</string>
+    <string name="object_photos">Фото</string>
+    <string name="make_photo">Сделать фото</string>
+    <string name="price">Цена</string>
 </resources>

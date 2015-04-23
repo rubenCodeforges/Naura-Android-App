@@ -1,6 +1,12 @@
 package com.codeforges.app.naura;
 
 import android.app.AlertDialog;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.net.Uri;
+import android.os.Environment;
+import android.provider.MediaStore;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,37 +17,75 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TabHost;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.codeforges.app.naura.adapters.ImageAdapter;
 import com.codeforges.app.naura.controllers.DataController;
+import com.codeforges.app.naura.helpers.CameraHelper;
 import com.codeforges.app.naura.helpers.DialogBuilder;
 import com.codeforges.app.naura.helpers.EntityManager;
 import com.codeforges.app.naura.helpers.FormHelper;
 import com.codeforges.app.naura.helpers.TransportHelper;
 import com.codeforges.app.naura.models.NauraData;
+import com.google.gson.Gson;
 import com.joanzapata.android.iconify.Iconify;
+
+import java.io.File;
 
 
 public class NewItemActivity extends ActionBarActivity {
 
     private FormHelper formHelper;
-    private Spinner communitySpinner,koSpinner;
+    private Spinner koSpinner;
     private AlertDialog buildingMaterialDialog,fasadDialog,roofDialog,windowDialog,floorDialog,heatTypeDialog,terraceDialog;
     private View.OnFocusChangeListener openDialogOnFocus;
     private DataController dataController;
     private EntityManager entityManager;
+    private GridView imageGrid;
+    CameraHelper cameraHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_object);
         Iconify.addIcons((Button) findViewById(R.id.btnSaveItem));
-        this.communitySpinner = (Spinner) findViewById(R.id.community);
+
+        Spinner communitySpinner = (Spinner) findViewById(R.id.community);
+
         this.koSpinner = (Spinner) findViewById(R.id.ko);
         this.dataController = new DataController(this);
         this.entityManager = new EntityManager(this);
+
+        this.formHelper = new FormHelper(this);
+        this.formHelper.datePickerAction( (EditText) findViewById(R.id.building_date),this );
+        this.formHelper.populateSpinner( communitySpinner, R.array.community_list );
+        this.cameraHelper  = new CameraHelper(this);
+        this.imageGrid = (GridView) findViewById(R.id.imageGrid);
+
+        this.initDialogs();
+        this.initTabs();
+
+        communitySpinner.setOnItemSelectedListener(
+            new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                    String community = "KO_" + parent.getItemAtPosition(pos).toString().replace(" ", "_");
+                    int community_id = getResources().getIdentifier(community, "array", getPackageName());
+                    formHelper.populateSpinner(koSpinner, community_id);
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> adapterView) {
+
+                }
+            }
+        );
         this.openDialogOnFocus = new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean focus) {
@@ -50,28 +94,6 @@ public class NewItemActivity extends ActionBarActivity {
                 }
             }
         };
-        this.formHelper = new FormHelper(this);
-        this.formHelper.datePickerAction((EditText) findViewById(R.id.building_date),this);
-        this.formHelper.populateSpinner(
-                this.communitySpinner, R.array.community_list
-        );
-        this.communitySpinner.setOnItemSelectedListener(
-                new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
-                        String community = "KO_" + parent.getItemAtPosition(pos).toString().replace(" ", "_");
-                        int community_id = getResources().getIdentifier(community, "array", getPackageName());
-                        formHelper.populateSpinner(koSpinner, community_id);
-                    }
-
-                    @Override
-                    public void onNothingSelected(AdapterView<?> adapterView) {
-
-                    }
-                }
-        );
-        this.initDialogs();
-        this.initTabs();
     }
 
 
@@ -143,18 +165,34 @@ public class NewItemActivity extends ActionBarActivity {
         spec.setIndicator(getString(R.string.object_structure));
         tabs.addTab(spec);
 
+        spec = tabs.newTabSpec("tag4");
+        spec.setContent(R.id.tab4);
+        spec.setIndicator(getString(R.string.object_photos));
+        tabs.addTab(spec);
+
         tabs.setCurrentTab(0);
     }
 
     public void onNewItem (View v) {
-        formHelper.submitFormData((ViewGroup) findViewById(R.id.tabHost));
-        NauraData item = new NauraData();
-        item.setItemTitle( ((TextView)findViewById(R.id.owner_name)).getText().toString() );
-        item.setItemData(formHelper.getFormData());
-        entityManager.persist(item);
-        entityManager.flush();
-        this.finish();
+        // TODO: Only one validation , should be more implement user hints
+        if(CameraHelper.imageUriHolder.size()!=0){
+            NauraData item = new NauraData();
+            Gson gson = new Gson();
+
+            formHelper.submitFormData((ViewGroup) findViewById(R.id.tabHost));
+
+            item.setItemTitle( ((TextView)findViewById(R.id.owner_name)).getText().toString() );
+            item.setItemData(formHelper.getFormData());
+            item.setItemData(gson.toJson(CameraHelper.imageUriHolder));
+            Log.v("image-data",gson.toJson( CameraHelper.imageUriHolder ));
+            entityManager.persist(item);
+            entityManager.flush();
+            this.finish();
+        }
+
     }
+
+
 
     public void initDialogs () {
         this.buildingMaterialDialog = new DialogBuilder().getDialog(
@@ -192,4 +230,15 @@ public class NewItemActivity extends ActionBarActivity {
         );
         findViewById(R.id.terrace_fence).setOnFocusChangeListener( this.openDialogOnFocus );
     }
+
+    public void makePhoto (View v) {
+        cameraHelper.onLaunchCamera();
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        cameraHelper.proccessResult(requestCode,resultCode,data);
+        this.imageGrid.setAdapter(new ImageAdapter(this));
+    }
+
 }

@@ -2,23 +2,12 @@ package com.codeforges.app.naura.controllers;
 
 import android.app.Activity;
 import android.database.Cursor;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AbsSpinner;
-import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
-import android.widget.TextView;
 
-import com.codeforges.app.naura.database.NauraCursor;
+import com.codeforges.app.naura.adapters.NauraCursor;
 import com.codeforges.app.naura.database.NauraDbHelper;
-import com.codeforges.app.naura.models.NauraData;
 import com.codeforges.app.naura.R;
-
-import java.util.ArrayList;
-import java.util.Iterator;
 
 /**
  * Created by Codeforges
@@ -30,10 +19,12 @@ public class DataController {
     private String newItems="";
 
     public DataController(Activity mainActivity) {
+        //TODO: activity can be remove
         this.mainActivity = mainActivity;
         this.databaseManager = new NauraDbHelper(mainActivity);
     }
 
+    // TODO: change structure , handle view as arg instead of geting it from activitiy
     public void loadListAction(){
         ListView itemsList = (ListView) this.mainActivity.findViewById(R.id.buildingList);
         //TODO: issue #13 use entityManager as a layer
@@ -41,4 +32,9 @@ public class DataController {
         NauraCursor cursor = new NauraCursor(this.mainActivity,data);
         itemsList.setAdapter(cursor);
     }
+
+    public void populateList (View v , String listType) {
+
+    }
+
 }

@@ -271,5 +271,27 @@
                     android:textSize="10sp" />
             </RadioGroup>
         </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/price"
+                android:id="@+id/textView7"
+                android:layout_column="0"
+                android:layout_weight="0.5" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/price"
+                android:layout_column="1"
+                android:layout_weight="1" />
+        </TableRow>
     </TableLayout>
 </LinearLayout>

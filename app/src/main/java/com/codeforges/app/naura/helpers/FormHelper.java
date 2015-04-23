@@ -77,7 +77,7 @@ public class FormHelper {
     }
 
     public String getFormData() {
-        return "{" + formData + "}";
+        return "{\n" + formData + "}";
     }
 
     public void submitFormData (ViewGroup layout) {
@@ -102,7 +102,7 @@ public class FormHelper {
                     key = activity.getResources().getString(stringId);
                     value = ((EditText) child).getText().toString();
 
-                    formData += "\"" + key + "\":"+ "\"" + value + "\",";
+                    formData += "\"" + key + "\":"+ "\"" + value + "\",\n";
                 }
 
                 if (child instanceof RadioButton && ((RadioButton)child).isChecked()) {
@@ -113,7 +113,7 @@ public class FormHelper {
                     key = activity.getResources().getString(stringId);
                     value = ((RadioButton) child).getText().toString();
 
-                    formData += "\"" + key + "\":"+ "\"" + value + "\",";
+                    formData += "\"" + key + "\":"+ "\"" + value + "\",\n";
                     Log.v("form-data", formData);
                 }
 
@@ -124,7 +124,7 @@ public class FormHelper {
         String communityVal = ((Spinner) activity.findViewById(R.id.community)).getSelectedItem().toString();
         String koVal = ((Spinner) activity.findViewById(R.id.ko)).getSelectedItem().toString();
 
-        return "\"community\" : " + " \"" + communityVal + "\" ," + " \"koValue\" : " + " \"" + koVal + "\"";
+        return "\"community\" : " + " \"" + communityVal + "\" ," + " \"koValue\" : " + " \"" + koVal + "\"\n";
     }
 
 }
