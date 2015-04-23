@@ -175,7 +175,7 @@ public class NewItemActivity extends ActionBarActivity {
 
     public void onNewItem (View v) {
         // TODO: Only one validation , should be more implement user hints
-        if( CameraHelper.imageUriHolder.size() !=0 ){
+        if( CameraHelper.pathHolder.size() !=0 ){
             NauraData item = new NauraData();
             Gson gson = new Gson();
 
@@ -191,7 +191,11 @@ public class NewItemActivity extends ActionBarActivity {
 
     }
 
-
+    public void onDestroy () {
+        super.onDestroy();
+        CameraHelper.imageUriHolder.clear();
+        CameraHelper.pathHolder.clear();
+    }
 
     public void initDialogs () {
         this.buildingMaterialDialog = new DialogBuilder().getDialog(

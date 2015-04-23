@@ -31,6 +31,8 @@ public class TransportHelper {
             emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
             emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+            emailIntent.setPackage("com.google.android.gm");
+
             Gson gson = new Gson();
             ArrayList<String> paths = gson.fromJson(model.getItemImages() , new ArrayList<>().getClass());
 
@@ -40,10 +42,10 @@ public class TransportHelper {
                 uris.add(Uri.fromFile(file));
             }
 
-            emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, CameraHelper.imageUriHolder);
+            emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris);
 
             try {
-                activity.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
+                activity.startActivity(emailIntent);
                 model.setUploaded(1);
                 //activity.finish();
                 Log.i("naura-i", "Finished sending email...");
