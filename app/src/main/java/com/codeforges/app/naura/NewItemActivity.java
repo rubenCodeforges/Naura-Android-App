@@ -175,7 +175,7 @@ public class NewItemActivity extends ActionBarActivity {
 
     public void onNewItem (View v) {
         // TODO: Only one validation , should be more implement user hints
-        if(CameraHelper.imageUriHolder.size()!=0){
+        if( CameraHelper.imageUriHolder.size() !=0 ){
             NauraData item = new NauraData();
             Gson gson = new Gson();
 
@@ -183,8 +183,7 @@ public class NewItemActivity extends ActionBarActivity {
 
             item.setItemTitle( ((TextView)findViewById(R.id.owner_name)).getText().toString() );
             item.setItemData(formHelper.getFormData());
-            item.setItemData(gson.toJson(CameraHelper.imageUriHolder));
-            Log.v("image-data",gson.toJson( CameraHelper.imageUriHolder ));
+            item.setItemImages(gson.toJson(CameraHelper.pathHolder));
             entityManager.persist(item);
             entityManager.flush();
             this.finish();

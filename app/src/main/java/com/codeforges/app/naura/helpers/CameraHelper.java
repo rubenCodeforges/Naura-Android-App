@@ -22,6 +22,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 
 public class CameraHelper {
@@ -30,7 +32,9 @@ public class CameraHelper {
     //TODO: Move agent id to settings
     public final static String agentId = "111";
     public String photoFileName;
+    // TODO: Uris should be store somewhere else
     public static ArrayList <Uri> imageUriHolder = new ArrayList<>();
+    public static ArrayList <String> pathHolder = new ArrayList<>();
     private Activity activity;
 
     public CameraHelper (Activity activity) {
@@ -67,6 +71,7 @@ public class CameraHelper {
 
                 Uri takenPhotoUri = getPhotoFileUri(photoFileName);
                 CameraHelper.imageUriHolder.add(takenPhotoUri);
+                CameraHelper.pathHolder.add(takenPhotoUri.getPath());
 
             } else { // Result was a failure
                 Toast.makeText(activity, "Picture wasn't taken!", Toast.LENGTH_SHORT).show();

@@ -7,8 +7,13 @@ import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.util.Log;
 
-import com.codeforges.app.naura.models.EntityInterface;
 import com.codeforges.app.naura.models.NauraData;
+import com.google.gson.Gson;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TransportHelper {
 
@@ -18,19 +23,29 @@ public class TransportHelper {
             Log.i("Send email", "");
 
             String[] TO = {mailto};
-            Intent emailIntent = new Intent(Intent.ACTION_SEND);
+            Intent emailIntent = new Intent(Intent.ACTION_SEND_MULTIPLE);
             emailIntent.setData(Uri.parse("mailto:"));
-            emailIntent.setType("application/json");
+            emailIntent.setType("text/plain");
 
 
             emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
             emailIntent.putExtra(Intent.EXTRA_TEXT, body);
+            Gson gson = new Gson();
+            ArrayList<String> paths = gson.fromJson(model.getItemImages() , new ArrayList<>().getClass());
+
+            ArrayList<Uri> uris = new ArrayList<>();
+            for(String path : paths ){
+                File file = new File(path);
+                uris.add(Uri.fromFile(file));
+            }
+
+            emailIntent.putParcelableArrayListExtra(Intent.EXTRA_STREAM, CameraHelper.imageUriHolder);
 
             try {
                 activity.startActivity(Intent.createChooser(emailIntent, "Send mail..."));
                 model.setUploaded(1);
-                //finish();
+                //activity.finish();
                 Log.i("naura-i", "Finished sending email...");
             } catch (android.content.ActivityNotFoundException ex) {
                 Log.w("naura-warning", "There is no email client installed.");
