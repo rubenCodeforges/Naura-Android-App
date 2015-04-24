@@ -31,10 +31,10 @@ public class NauraCursor extends CursorAdapter {
         TextView nauraItem = (TextView) view.findViewById(R.id.itemTitle);
         Button uploadedBtn = (Button) view.findViewById(R.id.uploaded_btn);
 
-        String uploaded = cursor.getString(cursor.getColumnIndexOrThrow("uploaded"));
+        //String uploaded = cursor.getString(cursor.getColumnIndexOrThrow("uploaded")) == 1 ? "отправить" : "";
         String title = cursor.getString(cursor.getColumnIndexOrThrow("item_title"));
 
         nauraItem.setText(title);
-        uploadedBtn.setText(uploaded);
+        uploadedBtn.setText("resend");
     }
 }

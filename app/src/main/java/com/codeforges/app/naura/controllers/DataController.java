@@ -19,7 +19,7 @@ public class DataController {
     private String newItems="";
 
     public DataController(Activity mainActivity) {
-        //TODO: activity can be remove
+        //TODO: activity can be removed
         this.mainActivity = mainActivity;
         this.databaseManager = new NauraDbHelper(mainActivity);
     }

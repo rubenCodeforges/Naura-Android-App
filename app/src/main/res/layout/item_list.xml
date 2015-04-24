@@ -24,6 +24,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="New Button"
+                android:onClick="resendItem"
                 android:id="@+id/uploaded_btn"
                 android:layout_column="1" />
         </TableRow>

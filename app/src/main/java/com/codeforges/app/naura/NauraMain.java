@@ -50,4 +50,7 @@ public class NauraMain extends ActionBarActivity {
         startActivity(intent);
     }
 
+    public void resendItem (View v) {
+        //TODO: implement resend action
+    }
 }

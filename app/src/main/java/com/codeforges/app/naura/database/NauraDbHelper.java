@@ -16,7 +16,7 @@ import com.codeforges.app.naura.models.NauraData;
 
 public class NauraDbHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 3;
+    private static final int DATABASE_VERSION = 4;
     private static final String DATABASE_NAME = "naura.db";
     private static final String TABLE_DATA = "naura_data";
     private static final String COLUMN_NAMES =
