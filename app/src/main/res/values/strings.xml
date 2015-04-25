@@ -98,5 +98,14 @@
     <string name="garden_fence_type">вид ограды</string>
     <string name="object_photos">Фото</string>
     <string name="make_photo">Сделать фото</string>
+
     <string name="price">Цена</string>
+    <string name="no_connection_title">Нет связи с интернетом</string>
+    <string name="no_connection_message">Данные будут сохраненны локально.\n \n
+        Вы сможете их отправить когда будете в сети. \n \n
+        Для этого в главном окне программы нажмите кнопку resend.
+    </string>
+    <string name="user_name">Ваше имя</string>
+    <string name="user_id">Ваш номер</string>
+    <string name="new_user_dialog_title">Регистрация</string>
 </resources>

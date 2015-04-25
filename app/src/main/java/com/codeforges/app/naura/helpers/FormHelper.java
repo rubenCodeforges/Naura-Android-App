@@ -11,7 +11,6 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.TableRow;
 
 import com.codeforges.app.naura.R;
 
@@ -23,14 +22,15 @@ public class FormHelper {
 
     private Activity activity;
     private String formData = "";
-    public  FormHelper(Activity context){
+
+    public FormHelper(Activity context) {
         this.activity = context;
     }
 
-    public void datePickerAction (final EditText editText, final Activity context) {
+    public void datePickerAction(final EditText editText, final Activity context) {
         final Calendar calendar = Calendar.getInstance();
 
-        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener(){
+        final DatePickerDialog.OnDateSetListener date = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker datePicker, int year, int month, int day) {
                 calendar.set(Calendar.YEAR, year);
@@ -53,7 +53,7 @@ public class FormHelper {
         editText.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean focus) {
-                if(focus){
+                if (focus) {
                     new DatePickerDialog(context, date, calendar
                             .get(Calendar.YEAR), calendar.get(Calendar.MONTH),
                             calendar.get(Calendar.DAY_OF_MONTH)).show();
@@ -64,13 +64,12 @@ public class FormHelper {
     }
 
     /**
-     *
-     * @param spinner Spinner to populate
+     * @param spinner  Spinner to populate
      * @param resource The resource id where the population data is stored
      */
-    public void populateSpinner (Spinner spinner , int resource ) {
+    public void populateSpinner(Spinner spinner, int resource) {
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.
-                createFromResource(activity , resource, android.R.layout.simple_spinner_item);
+                createFromResource(activity, resource, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         spinner.setAdapter(adapter);
@@ -80,9 +79,9 @@ public class FormHelper {
         return "{\n" + formData + "}";
     }
 
-    public void submitFormData (ViewGroup layout) {
-            storeFormData(layout);
-            formData += getSpinnerData();
+    public void submitFormData(ViewGroup layout) {
+        storeFormData(layout);
+        formData += getSpinnerData();
     }
 
     private void storeFormData(ViewGroup layout) {
@@ -91,35 +90,36 @@ public class FormHelper {
             String key;
             String value;
 
-            if (child instanceof ViewGroup){
+            if (child instanceof ViewGroup) {
                 storeFormData((ViewGroup) child);
             } else {
 
                 if (child instanceof EditText) {
                     String stringName = activity.getResources().getResourceEntryName(child.getId());
-                    int stringId = activity.getResources().getIdentifier(stringName,"string",activity.getPackageName());
+                    int stringId = activity.getResources().getIdentifier(stringName, "string", activity.getPackageName());
 
                     key = activity.getResources().getString(stringId);
                     value = ((EditText) child).getText().toString();
 
-                    formData += "\"" + key + "\":"+ "\"" + value + "\",\n";
+                    formData += "\"" + key + "\":" + "\"" + value + "\",\n";
                 }
 
-                if (child instanceof RadioButton && ((RadioButton)child).isChecked()) {
+                if (child instanceof RadioButton && ((RadioButton) child).isChecked()) {
                     View parent = (View) child.getParent();
                     String stringName = activity.getResources().getResourceEntryName(parent.getId());
-                    int stringId = activity.getResources().getIdentifier(stringName,"string",activity.getPackageName());
+                    int stringId = activity.getResources().getIdentifier(stringName, "string", activity.getPackageName());
 
                     key = activity.getResources().getString(stringId);
                     value = ((RadioButton) child).getText().toString();
 
-                    formData += "\"" + key + "\":"+ "\"" + value + "\",\n";
+                    formData += "\"" + key + "\":" + "\"" + value + "\",\n";
                     Log.v("form-data", formData);
                 }
 
             }
         }
     }
+
     private String getSpinnerData() {
         String communityVal = ((Spinner) activity.findViewById(R.id.community)).getSelectedItem().toString();
         String koVal = ((Spinner) activity.findViewById(R.id.ko)).getSelectedItem().toString();

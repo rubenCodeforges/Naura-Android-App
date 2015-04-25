@@ -12,14 +12,12 @@ import com.google.gson.Gson;
 
 import java.io.File;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class TransportHelper {
 
-    public static int sendMail (Activity activity, String mailto , String subject, String body , NauraData model) {
+    public static int sendMail(Activity activity, String mailto, String subject, String body, NauraData model) {
 
-        if(isConnected(activity)) {
+        if (isConnected(activity)) {
             Log.i("Send email", "");
 
             String[] TO = {mailto};
@@ -34,10 +32,10 @@ public class TransportHelper {
             emailIntent.setPackage("com.google.android.gm");
 
             Gson gson = new Gson();
-            ArrayList<String> paths = gson.fromJson(model.getItemImages() , new ArrayList<>().getClass());
+            ArrayList<String> paths = gson.fromJson(model.getItemImages(), new ArrayList<>().getClass());
 
             ArrayList<Uri> uris = new ArrayList<>();
-            for(String path : paths ){
+            for (String path : paths) {
                 File file = new File(path);
                 uris.add(Uri.fromFile(file));
             }
@@ -54,12 +52,12 @@ public class TransportHelper {
             }
 
         }
-        return isConnected(activity) ? 1 : 0 ;
+        return isConnected(activity) ? 1 : 0;
     }
 
     public static boolean isConnected(Activity activity) {
         ConnectivityManager cm =
-                (ConnectivityManager)activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+                (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
         return cm.getActiveNetworkInfo() != null &&
                 cm.getActiveNetworkInfo().isConnected();
     }
