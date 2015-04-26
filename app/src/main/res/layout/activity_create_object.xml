@@ -44,14 +44,14 @@
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
 
-                <LinearLayout
-                    android:id="@+id/tab1"
-                    android:tag="owner_info"
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:orientation="vertical">
-                    <include layout="@layout/create_object_tab_1" />
-                </LinearLayout>
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/tab1"-->
+                    <!--android:tag="owner_info"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="fill_parent"-->
+                    <!--android:orientation="vertical">-->
+                    <!--<include layout="@layout/create_object_tab_1" />-->
+                <!--</LinearLayout>-->
 
                 <LinearLayout
                     android:id="@+id/tab2"

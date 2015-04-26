@@ -28,6 +28,8 @@ import com.codeforges.app.naura.models.NauraData;
 import com.codeforges.app.naura.models.User;
 import com.google.gson.Gson;
 import com.joanzapata.android.iconify.Iconify;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 
 public class NewItemActivity extends ActionBarActivity {
@@ -148,9 +150,9 @@ public class NewItemActivity extends ActionBarActivity {
 
         TabHost.TabSpec spec = tabs.newTabSpec("tag1");
 
-        spec.setContent(R.id.tab1);
-        spec.setIndicator(getString(R.string.owner_info));
-        tabs.addTab(spec);
+//        spec.setContent(R.id.tab1);
+//        spec.setIndicator(getString(R.string.owner_info));
+//        tabs.addTab(spec);
 
         spec = tabs.newTabSpec("tag2");
         spec.setContent(R.id.tab2);

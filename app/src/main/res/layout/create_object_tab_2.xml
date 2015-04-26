@@ -10,7 +10,76 @@
         <TableLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/owner_name"
+                    android:id="@+id/owner_name_label"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="@dimen/abc_text_size_small_material" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/owner_name"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:layout_span="3" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/owner_phone"
+                    android:id="@+id/owner_phone_label"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="@dimen/abc_text_size_small_material" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/owner_phone"
+                    android:inputType="phone"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:layout_span="3" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:text="@string/other_contacts"
+                    android:id="@+id/textView"
+                    android:layout_column="0"
+                    android:layout_weight="0.1"
+                    android:textSize="@dimen/abc_text_size_small_material" />
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/other_contacts"
+                    android:layout_column="1"
+                    android:layout_weight="1"
+                    android:layout_span="3" />
+            </TableRow>
             <TableRow
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent">
@@ -314,6 +383,7 @@
 
             <TableRow
                 android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
                 android:layout_height="fill_parent">
 
                 <TextView
@@ -378,6 +448,7 @@
 
             <TableRow
                 android:layout_width="fill_parent"
+                android:layout_marginTop="10dp"
                 android:layout_height="fill_parent">
 
                 <TextView

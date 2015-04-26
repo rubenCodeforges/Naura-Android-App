@@ -1,6 +1,7 @@
 package com.codeforges.app.naura.adapters;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,9 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.codeforges.app.naura.helpers.CameraHelper;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 /**
  * Created by Codeforges on 23.04.15.
@@ -18,6 +22,9 @@ public class ImageAdapter extends BaseAdapter {
 
     public ImageAdapter(Context c) {
         this.mContext = c;
+        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(c)
+                .build();
+        ImageLoader.getInstance().init(config);
     }
 
     public int getCount() {
@@ -48,7 +55,11 @@ public class ImageAdapter extends BaseAdapter {
             imageView = (ImageView) convertView;
         }
 
-        imageView.setImageURI(CameraHelper.imageUriHolder.get(position));
+
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
+            .cacheOnDisk(true)
+            .build();
+        ImageLoader.getInstance().displayImage("file://"+CameraHelper.pathHolder.get(position), imageView, options);
 
         return imageView;
     }
